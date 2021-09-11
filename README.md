@@ -25,3 +25,8 @@ gem info bundler
 gem -v
 gem install rails
 rails –version
+
+
+Rails app creation: 
+rails new myApp -d postgresql (creates app with webpacker)
+rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript (creates app without webpacker)
