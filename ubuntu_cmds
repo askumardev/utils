@@ -1,0 +1,13 @@
+ssh administrator@192.168.5.222
+to remove a directory-----------rm -rf ff_qa
+to remove a zip-----------------rm ff4003.zip
+
+to unzip a file-----------------unzip qa_test_ff.zip
+to zip a folder-----------------zip -r br2706.zip bradmin-master
+
+./ngrok http -host-header=rewrite localhost:3000
+------------------------------------------------------------------------------
+
+scp /home/xdocsdev/4001_3/acceptance_fd.zip administrator@192.168.5.222:/home/administrator/test
+
+scp /home/administrator/FF-git/bradmin/app/admin/investor_entity.rb /home/administrator/FF/bradmin-master/app/admin
