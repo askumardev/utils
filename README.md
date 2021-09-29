@@ -46,3 +46,11 @@ test:
   pool: 5
   username: postgres
   password: postgres
+
+#PG db restoration commands
+*Open terminal
+*sudo su postgres
+*createdb sample_db;
+*Enter postgres password
+*psql -U postgres sample_db < sample_db_dump;
+
