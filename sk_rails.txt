@@ -355,13 +355,7 @@ https://hasjob.co/epmservices.biz/ymzl9
 ==================================================================================================================================
 paasing a param from index page
 <%= link_to 'Show',inventories_product_path(product.id,type: "product_varient"),class: 'btn btn-warning' %>
-==================================================================================================================================
-Thanks & Regards
-Krishna Dasam
-Associate Software Engineer
-Manuh Global Technologies Pvt. Ltd
-Mobile No: +91-9581010485
-Email ID: k.dasam@manuhindia.com
+
 ==================================================================================================================================
 
 
@@ -487,7 +481,7 @@ https://stackoverflow.com/questions/18131386/multi-select-file-upload-field-with
 ============================================================================================
 https://medium.com/react-on-rails
 ============================================================================================
-dkrishna@ubuntu-desktop3:~$ gem list
+sk@ubuntu-desktop3:~$ gem list
 
 gem list will list out all the gems that are installed in our system.
 
@@ -637,7 +631,7 @@ https://stackoverflow.com/questions/2155622/get-a-list-of-checked-checkboxes-in-
 http://jsfiddle.net/dvCmR/
 
 function checkSum(obj){ 
-  //krishna-->getting the values of selected checkboxes
+  //sk-->getting the values of selected checkboxes
   var selected = $("#panel_checkbox input:checked").map(function(i,el){return el.value;}).get();    
   var taxdata = {"taxids":selected}
   $.ajax({
