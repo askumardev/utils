@@ -28,7 +28,6 @@ http://192.168.1.246:8069/web
 
 http://192.168.3.94:8069-------------------> email:p.golla@manuhindia.com, password: manuh@1234
 ============================================================================================
-============================================================================================
 purchase order bug-> qty_received is greater than product_qty when the same product is selected in purchase order lines.-->fixed in smerp 5 modules and need to change in bhuvaneswar.
 
 remove taxes links are hided if the invoice is not in draft state. i.e., if the invoice is validated direct account invoice,from purchase order, in customer invoices.
@@ -36,91 +35,39 @@ remove taxes links are hided if the invoice is not in draft state. i.e., if the 
 
 ============================================================================================
 truncate table accounting_account_invoice_lines restart identity;
-
 truncate table accounting_account_invoices restart identity;
-
 truncate table purchase_purchase_order_lines restart identity;
-
 truncate table purchase_purchase_orders restart identity;
-
 truncate table stock_pickings restart identity;
-
 truncate table stock_moves restart identity;
-
 truncate table accounting_account_tax_pol_rels restart identity;
 ============================================================================================
 dev:
 ---
 
-
 truncate table purchase_purchase_order_lines restart identity;
-
 truncate table purchase_purchase_orders restart identity;
-
 truncate table accounting_account_tax_pol_rels restart identity;
-
 truncate table purchase_vendor_pos restart identity;
-
 truncate table accounting_account_invoice_lines restart identity;
-
 truncate table accounting_account_invoices restart identity;
-
 truncate table accounting_invoice_line_taxes restart identity;
-
 truncate table accounting_account_moves restart identity;
-
 truncate table accounting_account_move_lines restart identity;
-
 truncate table stock_pickings restart identity;
-
 truncate table stock_moves restart identity;
 
 ============================================================================================
 
 afzal for pos,sos,direct cust and invs:
 .......................................
-
-
-truncate table accounting_account_invoice_accout_move_line_rels,
-
-accounting_account_invoice_lines,
-
-accounting_account_invoice_taxes,
-
-accounting_account_invoices,
-
-accounting_account_moves,
-
-accounting_account_move_lines,
-
-accounting_account_payments,
-
-accounting_account_tax_pol_rels,
-
-accounting_invoice_line_taxes,
-
-purchase_purchase_order_lines,
-
-purchase_purchase_orders,
-
-sale_sale_order_line_accounting_tax_pol_rels,
-
-sale_sale_order_lines,
-
-sale_sale_orders,
-
-stock_moves,
-
+truncate table accounting_account_invoice_accout_move_line_rels,accounting_account_invoice_lines,
+accounting_account_invoice_taxes, accounting_account_invoices, accounting_account_moves,
+accounting_account_move_lines, accounting_account_payments, accounting_account_tax_pol_rels,
+accounting_invoice_line_taxes, purchase_purchase_order_lines, purchase_purchase_orders,
+sale_sale_order_line_accounting_tax_pol_rels, sale_sale_order_lines, sale_sale_orders,stock_moves,
 stock_pickings restart identity;
 
-
-
-
-
-
-============================================================================================
-
----------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Desktop>SMERP_Saudhi>09.04.18>smerp_dev is the client running project which is not having cancan
 
@@ -128,28 +75,21 @@ home>smerp_dev is the development for 5 modules having cancan
 
 Desktop>Bhuvaneswar_Dev>SMERP_BBS is the bhuvaneswar project
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-
 
 Q) The single-table inheritance mechanism failed to locate the subclass: 'Register Payment'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Accounting::AccountInvoice.inheritance_column to use another column for that information.
-
-
 ans:- just remove the data("Register Payment") inserted in the type field in the acc invoices.
 
 
 Q) customer invoices-register payment-sending the value in the hidden field along with <a> link button
-
 ans:-  <a href="#" class="btn btn-primary" onclick="submitcustomerinvoiceformDirect();">Register Payment</a>
     <%#= f.hidden_field :state, :value=>'Register Payment'%>---->wrong way
     <%= hidden_field_tag :state, "Register Payment" %>---->correct way
 
 we can do type,value in f.submit button, it will not work in this situaion, but will work on other cases
-<%#= f.submit  'Register Payment' , name: "type",value: "Register Payment",:class=>"btn btn-primary", onclick: 'submitcustomerinvoiceformDirect();'%> 
+<%#= f.submit  'Register Payment' , name: "type",value: "Register Payment",:class=>"btn btn-primary", onclick: 'submitcustomerinvoiceformDirect();'%>
 
 
-
-
-********************************************************************************************************************************
+************************************************************************************************************
 Q) to display data in the edit page directly and which cant be edited
 <div class="col-xs-4">
 <% if params[:action]== "edit" %>
@@ -161,18 +101,18 @@ Q) to display data in the edit page directly and which cant be edited
 <% end %>                 
 </div>
 
-********************************************************************************************************************************
+************************************************************************************************************
 Q) method for pagination,write the method name after authenticate user in the application controller.
 
 def set_pagination
-    if params[:page].nil?
-      @page=1
-    else
-      @page = params[:page]
-    end
+  if params[:page].nil?
+    @page=1
+  else
+    @page = params[:page]
+  end
 end
 
-*********************************************************************************************************************
+*************************************************************************************************************
 Q) set background image for a table
 .tkt_view{
   /*background-image: url(../../assets/login-bg.jpg);*/->from app/assets/images folder
@@ -187,15 +127,10 @@ Q)Showing Image Attachments
 
 Q) to download Image attachments
 <%@attachments.each do |attachment|%>         
- <%= link_to attachment.image(:original), download: "#{attachment.id}_#{attachment.image_file_name}" do%><br>         
- <%=attachment.image_file_name%>
- <%end%>
+  <%= link_to attachment.image(:original), download: "#{attachment.id}_#{attachment.image_file_name}" do%><br>         
+    <%=attachment.image_file_name%>
+  <%end%>
 <%end%>
-
-
-https://www.spencerdixon.com/blog/image-preview-with-carrierwave-and-rails.html
-https://thinkster.io/tutorials/angular-rails
-
 
 
 Q) collection select in a show page
@@ -218,16 +153,6 @@ Q) Will Paginate Gem Documentation
 4) Write this in the view(index.html.erb)
    <%= will_paginate @designations %>
 
-showing entries will_paginate
-http://www.rubydoc.info/github/mislav/will_paginate/WillPaginate/ViewHelpers
-http://www.rubydoc.info/github/mislav/will_paginate/WillPaginate/Collection
-
-will_paginate pagination styles
-http://mislav.github.io/will_paginate/
-
-https://www.learnenough.com/action-cable-tutorial
-
-
 Q) Dropdown menu user profile linking--we are adding html_safe to render using link_to
 <li><%=link_to ('<i class="fa fa-user" aria-hidden="true"></i> My Profile').html_safe,my_profile_path%></li>
 
@@ -241,9 +166,7 @@ https://m.patrikonrails.com/how-to-make-ajax-calls-the-rails-way-20174715d176
 
 <%#= select_tag :assigned_to,options_for_select(results), {:include_blank => 'Select'}  %>
 
-<%#= check_box_tag 'show all',true,false,data: { url: inactive_companies_companies_path, remote: true }, style: 'margin-top:2%;'%> 
-
-
+<%#= check_box_tag 'show all',true,false,data: { url: inactive_companies_companies_path, remote: true }, style: 'margin-top:2%;'%>
 
 // $('#status_result_id').on('change',function(){
 //   var status_result = $('#status_result_id').val();
@@ -254,7 +177,6 @@ https://m.patrikonrails.com/how-to-make-ajax-calls-the-rails-way-20174715d176
 //     window.location.href = '/statuses/inactive_list'
 //   }
 // });
-
 
 var stat_result = $('#status_result_id').val();
 if(stat_result=='active'){
@@ -267,14 +189,14 @@ $('.inactive_status_data').show();
 }
 
 if(window.location.href.indexOf("false") > -1) {
-     $('.inactive_status_data').show();
-     $('.active_status_data').hide();
-     $('#status_result_id').val('in active');
+  $('.inactive_status_data').show();
+  $('.active_status_data').hide();
+  $('#status_result_id').val('in active');
 }
 if(window.location.href.indexOf("true") > -1) {
-     $('.inactive_status_data').hide();
-     $('.active_status_data').show();
-     $('#status_result_id').val('active');
+  $('.inactive_status_data').hide();
+  $('.active_status_data').show();
+  $('#status_result_id').val('active');
 }
 
 $('#status_result_id').on('change',function(){
@@ -315,80 +237,56 @@ Reporting---->SMERP
 controller-->here
 
 def sale_or_purchase_preview
-		@target_moves = params[:target_moves]
-		@entries_sort = params[:entries_sort]
-		@start_date = Time.zone.parse(params[:start_date]).utc if params[:start_date]
-		@end_date = Time.zone.parse(params[:end_date]).utc if params[:end_date]
-		@journals = params[:journals]
-		binding.pry
-		if params[:target_moves] == "All Posted Entries"
-			@invoices_in_date_range = Accounting::AccountInvoice.where('state = ? and invoice_date BETWEEN ? AND ?','Paid',@start_date, @end_date).ids.collect{|i| i.to_s}
-		elsif params[:target_moves] == "All Entries"
-			@invoices_in_date_range = Accounting::AccountInvoice.where('invoice_date BETWEEN ? AND ?',@start_date, @end_date).ids.collect{|i| i.to_s}
-		end
-		# @invoices_in_date_range = Accounting::AccountInvoice.where(:invoice_date => @start_date..@end_date).ids.collect{|i| i.to_s}
-		#@acc_invoices = Accounting::AccountInvoice.where('invoice_date BETWEEN ? AND ?', @start_date, @end_date)
-		#binding.pry
-		#@acc_move_ids = Accounting::AccountMove.where('journal_id in(?)',@journals).ids
-		@acc_move_ids = Accounting::AccountMove.where('journal_id = ? and ref in (?)',1,@invoices_in_date_range).ids
-		@acc_move_lines = Accounting::AccountMoveLine.where('account_move_id in (?)',@acc_move_ids)
-		respond_to do |format|
-	    format.html
-	    format.pdf do
-	      render :pdf => "sale/purchase report"
-	    end
+  @target_moves = params[:target_moves]
+  @entries_sort = params[:entries_sort]
+  @start_date = Time.zone.parse(params[:start_date]).utc if params[:start_date]
+  @end_date = Time.zone.parse(params[:end_date]).utc if params[:end_date]
+  @journals = params[:journals]
+  if params[:target_moves] == "All Posted Entries"
+  	@invoices_in_date_range = Accounting::AccountInvoice.where('state = ? and invoice_date BETWEEN ? AND ?','Paid',@start_date, @end_date).ids.collect{|i| i.to_s}
+  elsif params[:target_moves] == "All Entries"
+    @invoices_in_date_range = Accounting::AccountInvoice.where('invoice_date BETWEEN ? AND ?',@start_date, @end_date).ids.collect{|i| i.to_s}
+  end
+  # @invoices_in_date_range = Accounting::AccountInvoice.where(:invoice_date => @start_date..@end_date).ids.collect{|i| i.to_s}
+  # @acc_invoices = Accounting::AccountInvoice.where('invoice_date BETWEEN ? AND ?', @start_date, @end_date)
+  # @acc_move_ids = Accounting::AccountMove.where('journal_id in(?)',@journals).ids
+  @acc_move_ids = Accounting::AccountMove.where('journal_id = ? and ref in (?)',1,@invoices_in_date_range).ids
+  @acc_move_lines = Accounting::AccountMoveLine.where('account_move_id in (?)',@acc_move_ids)
+  respond_to do |format|
+    format.html
+    format.pdf do
+      render :pdf => "sale/purchase report"
     end
-	end
+  end
+end
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 https://medium.com/
 
 Q) Show and Hide the div by using check box
 https://www.aspsnippets.com/Articles/Show-Hide-DIV-with-TextBox-when-CheckBox-is-checked-unchecked-using-JavaScript-and-jQuery.aspx
-==================================================================================================================================
+==============================================================================================================
 Q) For new installations you should be running rake db:schema:load, not rake db:migrate, this will load the schema into the database, which is faster than running all the migrations.
-==================================================================================================================================
 
-==================================================================================================================================
-https://stackoverflow.com/questions/16319008/get-nested-form-field-id-number-from-cocoon
-https://hasjob.co/epmservices.biz/ymzl9
-==================================================================================================================================
+=============================================================================================================
 paasing a param from index page
 <%= link_to 'Show',inventories_product_path(product.id,type: "product_varient"),class: 'btn btn-warning' %>
 
-==================================================================================================================================
+==============================================================================================================
 
-
-
-https://jacopretorius.net/2017/04/validate-uniqueness-in-rails.html
-
-http://api.rubyonrails.org/classes/ActiveRecord/Validations/ClassMethods.html#method-i-validates_uniqueness_of
-
-https://www.engineyard.com/blog/
-
-https://iridakos.com/tutorials/2017/12/03/elasticsearch-and-rails-tutorial.html
-
-https://revs.runtime-revolution.com/working-with-facebook-using-devise-omniauth-koala-and-rails-5-cde5d032de02
-
-====================================================================================================================================
-
-if a record is not found, then we can handle the exception as
-
-in the application controller,
+if a record is not found, then we can handle the exception as in the application controller,
 rescue_from ActiveRecord::RecordNotFound, :with => :render_404
 
 create a method as render_404 as mentioned in :with
 then you can render template or redirect to any other action
 
 link: https://stackoverflow.com/questions/32328074/how-to-handle-error-when-id-is-not-found
-====================================================================================================================================
+=============================================================================================================
 http://www.rubydoc.info/github/CanCanCommunity/cancancan/CanCan/Ability
-
-asatish764@gmail.com
 
 https://app.codility.com-->online ruby interview tests
 
-====================================================================================================================================
+============================================================================================================
 Has and Belongs to Many Association Example:
 
 Users has and belongs to many Branches
@@ -468,11 +366,6 @@ i'm adding in collection checkboxes to form as below.
 
 in my controller, i'm passing params as like below.
 params.require(:accounting_group_tax).permit(:id,:name,:amount,:create_by,:modified_by,:is_active,:account_tax_ids=>[])
-
-
-============================================================================================
-selecting multiple fields inside cocoon nested field
-https://stackoverflow.com/questions/18131386/multi-select-file-upload-field-with-nested-attributes-in-rails
 ============================================================================================
 
   var form =  $('#formpayment').get(0);
@@ -489,23 +382,8 @@ gem list will list out all the gems that are installed in our system.
 we have migration timestamps at schema migrations.
 if we generated a migration and it's not creating a table, then we should have to check out the schema migrations.if any previous migration exists with the same table name then we have to remove the previous timestamp row then run rake db:migrate
 ============================================================================================
-http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html
-============================================================================================
-Scopes that are written inside model are also accesible in the helpers.
-============================================================================================
-https://www.sitepoint.com/learn-the-first-best-practices-for-rails-and-rspec/
-============================================================================================
-Converting Date format from
-2018-04-25 00:00:00 UTC to 2018-04-25 by date.strftime("%Y-%m-%d")
-https://stackoverflow.com/questions/25403683/removing-eg-utc-0100-0200-seconds-from-the-timezone-rails
-============================================================================================
-http://rspec.info/
-============================================================================================
 https://learndigital.withgoogle.com/digitalunlocked/?dclid=CLriz7qft9oCFQgeaAodQAADQQ&gclid=EAIaIQobChMIvOzukp-32gIVxo5oCh0yPwLpEAEYASAAEgK2JfD_BwE
-============================================================================================
-https://medium.mybridge.co/learn-react-js-from-top-45-tutorials-for-the-past-year-v-2018-28b7f4d4b2c4
-============================================================================================
-https://www.theodinproject.com/courses/ruby-on-rails/lessons/active-record-associations
+
 ============================================================================================
 Calling Cocoon Before and After Functions Examples:
 
@@ -513,30 +391,28 @@ In Your View
 Nested Form Below
 
  <div class="col-md-12 table-responsive"  id="pol_item">
-                <fieldset id="recipe-ingredients">
-                <% @i=0 %>
-                 <%= f.fields_for :purchase_order_lines  do |ptl| %>
-                  <%= render 'purchase_order_line_fields', :f => ptl,:k=>@i%>
-                  <% @i=@i+1 %>
-                 <% end %>
-                 <% if  @po.state !='confirm' %>                   
-                 <div class="links">
-                   <%= link_to_add_association 'Add Item', f, :purchase_order_lines,:data => {"association-insertion-method" => "before" },class: "btn btn-success",:id=>"pol_item" %>
-                 </div>
-                 <% end %>
-               </fieldset>
-              </div>
-
+    <fieldset id="recipe-ingredients">
+    <% @i=0 %>
+     <%= f.fields_for :purchase_order_lines  do |ptl| %>
+      <%= render 'purchase_order_line_fields', :f => ptl,:k=>@i%>
+      <% @i=@i+1 %>
+     <% end %>
+     <% if  @po.state !='confirm' %>                   
+     <div class="links">
+       <%= link_to_add_association 'Add Item', f, :purchase_order_lines,:data => {"association-insertion-method" => "before" },class: "btn btn-success",:id=>"pol_item" %>
+     </div>
+     <% end %>
+   </fieldset>
+  </div>
 
 id="pol_item" is the id in the calling doc ready function--><div class="col-md-12 table-responsive"  id="pol_item">
 and you can call in document ready function like this
 
 $(document).ready(function() {
-    $('#pol_item').on("cocoon:after-remove", function() {
-        getNullAmounts();
-      });
+  $('#pol_item').on("cocoon:after-remove", function() {
+    getNullAmounts();
+  });
 });
-
 
 ============================================================================================
 <button id="callConfirm">Confirm!</button>
@@ -544,10 +420,7 @@ $(document).ready(function() {
 <div id="dialog" title="Confirmation Required">
   Are you sure about this?
 </div>
-
-
 $(function() {
-
   $("#dialog").dialog({
      autoOpen: false,
      modal: true,
@@ -560,23 +433,20 @@ $(function() {
           }
         }
       });
-
   $("#callConfirm").on("click", function(e) {
       e.preventDefault();
       $("#dialog").dialog("open");
   });
-
 });
 ============================================================================================
-Cassandra DB with Rails 
-
+Cassandra DB with Rails
 https://medium.com/technically-speaking/rails-4-user-authentication-with-cequel-and-devise-86e1c9ccbcd0
 ============================================================================================
 rejecting nested attributes based on specific field absence
 accepts_nested_attributes_for :account_invoice_lines,reject_if: :reject_products, allow_destroy: true
 def reject_products(attributes)
-    attributes['product_id'].blank?
-  end
+  attributes['product_id'].blank?
+end
 ============================================================================================
 if we are entering 0010 in a text field,while calculating the amount it will taka octa values instead of decimal.to overcome this
 we have to replace the given string as below.
@@ -586,18 +456,10 @@ str.replace(/^0+(?!\.|$)/, '')
   '0000.00' --> '0.00'   
      '0.00' --> '0.00'   
   '00123.0' --> '123.0'   
-        '0' --> '0'  
+        '0' --> '0'
 
+============================================================================================
 
-https://stackoverflow.com/questions/594325/truncate-leading-zeros-of-a-string-in-javascript
-============================================================================================
-https://www.ibm.com/developerworks/
-https://ieeexplore.ieee.org/Xplore/home.jsp
-https://devblast.com/start
-https://www.coursera.org/learn/ruby-on-rails-web-services-mongodb
-https://scotch.io/tutorials/build-a-restful-json-api-with-rails-5-part-one
-https://try.github.io/levels/1/challenges/1
-============================================================================================
 <div class="col-xs-3 panel_checkbox">
   <%= f.collection_check_boxes(:user_ids, User.active, :id, :name, checked: User.active.try(:user_ids)) do |user|%>
      <div class="checkbox checkbox-success checkbox-circle panel_check">
@@ -612,21 +474,22 @@ https://try.github.io/levels/1/challenges/1
 <% end %> 
 
 resources :group_taxes do
-      collection do
-        get 'get_amount',to: "group_taxes#get_amount"
-      end
-    end
+  collection do
+    get 'get_amount',to: "group_taxes#get_amount"
+  end
+end
 
 def get_amount
-    amount = 0.0
-    if params[:taxids].present? 
-      params[:taxids].each do |id|
-        amount += Accounting::AccountTax.find(id).amount
-      end
+  amount = 0.0
+  if params[:taxids].present? 
+    params[:taxids].each do |id|
+      amount += Accounting::AccountTax.find(id).amount
     end
-    render json:amount.to_json
   end
+  render json:amount.to_json
+end
 
+==============================================================================================
 https://stackoverflow.com/questions/2155622/get-a-list-of-checked-checkboxes-in-a-div-using-jquery
 http://jsfiddle.net/dvCmR/
 
@@ -667,116 +530,31 @@ count.times do |n|
 end
 Ruby Triangle
 ============================================================================================
-https://skillcrush.com/2014/05/08/17-awesome-ruby-programming-language/
-============================================================================================
-https://esausilva.com/2016/01/29/move-items-between-two-listbox-using-jquery-html-select-tag/
-============================================================================================
-https://blog.cloud66.com/supercharge-rails-with-vuejs-and-actioncables/
-https://github.com/cloud66-samples/rails-5-actioncable-example
-https://mkdev.me/en/posts/rails-5-vue-js-how-to-stop-worrying-and-love-the-frontend
-https://blog.codeship.com/vuejs-as-a-frontend-for-rails/
-============================================================================================
-http://learnruby.com/code.html
-https://rubygarage.org/
-https://rubygarage.org/blog/how-to-interview-your-ruby-on-rails-developer
-============================================================================================
-https://medium.freecodecamp.org/how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience-6add97be2051
-============================================================================================
-http://www.betterspecs.org/
-http://www.nascenia.com/ruby-on-rails-application-testing-using-rspec/
-============================================================================================
-http://www.nascenia.com/how-to-integrate-elasticsearch-in-your-rails-application/
-https://www.sitepoint.com/full-text-search-rails-elasticsearch/
-============================================================================================
-https://www.theodinproject.com/courses
-https://www.sitepoint.com/model-view-controller-mvc-architecture-rails/
-https://www.engineyard.com/
-https://www.engineyard.com/blog/using_form_with-vs-form_for-vs-form_tag
-https://rubyinrails.com/2014/03/17/what-is-attr_accessor-in-rails/
-https://rubyinrails.com/
-============================================================================================
-https://www.sitepoint.com/generate-excel-spreadsheets-rails-axlsx-gem/
-============================================================================================
-we can change the order of insertion of cocoon nested fields
-by the given way.
-
-$(document).ready(function() {
-    $("#owner a.add_fields").
-      data("association-insertion-method", 'before').
-      data("association-insertion-node", 'this');
-});
-
-in smerp,
-
-  $("#acinvl_item a.add_fields").
-  data("association-insertion-method", 'before').
-  data("association-insertion-node", 'this');   
-============================================================================================
-https://www.codewithjason.com/getting-started-with-angular-and-rails/
-============================================================================================
-https://stackoverflow.com/questions/18369592/modify-ruby-hash-in-place-rails-strong-params
-============================================================================================
-https://medium.com/rails-ember-beyond/ajax-file-upload-in-rails-using-dropzone-and-carrierwave-6f5436fdfdb0
-https://github.com/scaffeinate/dropzone-rails-demo
-https://shrouded-beyond-2562.herokuapp.com/
-============================================================================================
-
-https://www.w3resource.com/javascript/form/phone-no-validation.php
-============================================================================================
-https://medium.com/@mackenziechild/how-you-can-finally-learn-to-build-stuff-with-rails-eff61e7bcb6f
-============================================================================================
-Modal Pop Up Cannot be hided if we click on outside pop up or if we pressed the 'ESC'
-$('#accpaymentmodalinvoice').modal({backdrop: 'static', keyboard: false}) 
-============================================================================================
-https://medium.freecodecamp.org/every-time-you-build-a-to-do-list-app-a-puppy-dies-505b54637a5d
-============================================================================================
-https://www.justinweiss.com/articles/how-to-select-database-records-in-an-arbitrary-order/
-============================================================================================
-https://github.com/alexreisner/geocoder
-============================================================================================
-https://www.bountysource.com/
-https://www.codementor.io/community
-============================================================================================
-https://www.rubytapas.com/***
-============================================================================================
 1) Create table product_categories_bkp_06062018 as
 select * from product_categories
 
 2) INSERT INTO product_categories
 SELECT * FROM product_categories_bkp_06062018;
 ============================================================================================
-https://intellipaat.com/tutorial/salesforce-tutorial/
-============================================================================================
-https://richonrails.com/articles/mongodb-and-rails
-http://kerrizor.com/blog/2014/04/02/quick-intro-to-mongodb-in-rails
-http://www.ganeshkunwar.com.np/2018/01/06/setting-mysql-database-rails-application/
-https://medium.com/@jordanstorms/rails-and-mongodb-the-first-attempt-955e1974f664
+we can change the order of insertion of cocoon nested fields by the given way.
+
+$(document).ready(function() {
+  $("#owner a.add_fields").
+    data("association-insertion-method", 'before').
+    data("association-insertion-node", 'this');
+});
+
+in smerp,
+  $("#acinvl_item a.add_fields").
+  data("association-insertion-method", 'before').
+  data("association-insertion-node", 'this');
 ============================================================================================
 setting the value of a dropdown using index number
-
 var hidden_product = $('#manufacturing_production_hidden_product_id').val();
 $("select#manufacturing_production_product_id")[0].selectedIndex = hidden_product;
-
 ============================================================================================
-Allow only numeric or decimal input in textbox using jQuery - JSFiddle
-https://jsfiddle.net/Behseini/ue8gj52t/
+Modal Pop Up Cannot be hided if we click on outside pop up or if we pressed the 'ESC'
+$('#accpaymentmodalinvoice').modal({backdrop: 'static', keyboard: false}) 
 ============================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Scopes that are written inside model are also accesible in the helpers.
+============================================================================================
