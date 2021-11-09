@@ -37,7 +37,7 @@ development:\
   database: todo_App_Api_dev\
   pool: 5\
   username: postgres\
-  password: postgres\
+  password: postgres
 
 test:\
   adapter: postgresql\
@@ -45,9 +45,9 @@ test:\
   database: todo_App_Api_test\
   pool: 5\
   username: postgres\
-  password: postgres\
+  password: postgres
 
-#PG db restoration commands
+## PG db restoration commands
 * Open terminal
 * sudo su postgres
 * createdb sample_db;
