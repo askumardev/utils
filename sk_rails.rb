@@ -1,38 +1,9 @@
-MIMS->08-01-2018,09-01-2018,10-01-2018
-HELP DESK timesheet inserted in smerp development
 
-SVN for Help Desk
-svn checkout svn://192.168.1.101/Java_Apps/Helpdesk/helpdesk_dev
+purchase order bug-> qty_received is greater than product_qty when the same product is selected 
+in purchase order lines.-->fixed in smerp 5 modules and need to change in bhuvaneswar.
 
-SVN for SMERP
-svn co svn://192.168.1.101/Java_Apps/SMERP/smerp_dev
-
-SVN for Bhuvaneswar SMERP
-svn co svn://192.168.1.101/Java_Apps/SMERP/SMERP_BBS
-
-SVN for EISAI
-svn co svn://192.168.1.101/Mobile_Apps/Eisai_App  
-
-SVN for CSR
-svn co svn://192.168.1.101/Java_Apps/CSR/CSR_DEV 
-
-SVN for MIMS
-svn://192.168.1.101/Java_Apps/MIMS-ROR-2018
-   
-
-public url for smerp:
-http://125.62.194.122:4000
-
-Odoo url:
-http://192.168.1.246:8069/web
-
-http://192.168.3.94:8069-------------------> email:p.golla@manuhindia.com, password: manuh@1234
-============================================================================================
-purchase order bug-> qty_received is greater than product_qty when the same product is selected in purchase order lines.-->fixed in smerp 5 modules and need to change in bhuvaneswar.
-
-remove taxes links are hided if the invoice is not in draft state. i.e., if the invoice is validated direct account invoice,from purchase order, in customer invoices.
-
-
+remove taxes links are hided if the invoice is not in draft state. i.e., if the invoice is 
+validated direct account invoice,from purchase order, in customer invoices.
 ============================================================================================
 truncate table accounting_account_invoice_lines restart identity;
 truncate table accounting_account_invoices restart identity;
@@ -43,8 +14,6 @@ truncate table stock_moves restart identity;
 truncate table accounting_account_tax_pol_rels restart identity;
 ============================================================================================
 dev:
----
-
 truncate table purchase_purchase_order_lines restart identity;
 truncate table purchase_purchase_orders restart identity;
 truncate table accounting_account_tax_pol_rels restart identity;
@@ -56,9 +25,7 @@ truncate table accounting_account_moves restart identity;
 truncate table accounting_account_move_lines restart identity;
 truncate table stock_pickings restart identity;
 truncate table stock_moves restart identity;
-
 ============================================================================================
-
 afzal for pos,sos,direct cust and invs:
 .......................................
 truncate table accounting_account_invoice_accout_move_line_rels,accounting_account_invoice_lines,
@@ -67,7 +34,6 @@ accounting_account_move_lines, accounting_account_payments, accounting_account_t
 accounting_invoice_line_taxes, purchase_purchase_order_lines, purchase_purchase_orders,
 sale_sale_order_line_accounting_tax_pol_rels, sale_sale_order_lines, sale_sale_orders,stock_moves,
 stock_pickings restart identity;
-
 ---------------------------------------------------------------------------------
 Desktop>SMERP_Saudhi>09.04.18>smerp_dev is the client running project which is not having cancan
 
@@ -75,10 +41,11 @@ home>smerp_dev is the development for 5 modules having cancan
 
 Desktop>Bhuvaneswar_Dev>SMERP_BBS is the bhuvaneswar project
 ---------------------------------------------------------------------------------
-
-Q) The single-table inheritance mechanism failed to locate the subclass: 'Register Payment'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Accounting::AccountInvoice.inheritance_column to use another column for that information.
+Q) The single-table inheritance mechanism failed to locate the subclass: 'Register Payment'. 
+This error is raised because the column 'type' is reserved for storing the class in case of inheritance. 
+  Please rename this column if you didn't intend it to be used for storing the inheritance class or 
+  overwrite Accounting::AccountInvoice.inheritance_column to use another column for that information.
 ans:- just remove the data("Register Payment") inserted in the type field in the acc invoices.
-
 
 Q) customer invoices-register payment-sending the value in the hidden field along with <a> link button
 ans:-  <a href="#" class="btn btn-primary" onclick="submitcustomerinvoiceformDirect();">Register Payment</a>
@@ -86,19 +53,18 @@ ans:-  <a href="#" class="btn btn-primary" onclick="submitcustomerinvoiceformDir
     <%= hidden_field_tag :state, "Register Payment" %>---->correct way
 
 we can do type,value in f.submit button, it will not work in this situaion, but will work on other cases
-<%#= f.submit  'Register Payment' , name: "type",value: "Register Payment",:class=>"btn btn-primary", onclick: 'submitcustomerinvoiceformDirect();'%>
-
-
+<%#= f.submit  'Register Payment' , name: "type",value: "Register Payment",:class=>"btn btn-primary", 
+onclick: 'submitcustomerinvoiceformDirect();'%>
 ************************************************************************************************************
 Q) to display data in the edit page directly and which cant be edited
 <div class="col-xs-4">
-<% if params[:action]== "edit" %>
-<%= f.object.method %>**
-<% else %>
-<%= f.radio_button :method,'Linear' %>Linear
-<br>
-<%= f.radio_button :method,'Degressive'%>Degressive
-<% end %>                 
+  <% if params[:action]== "edit" %>
+    <%= f.object.method %>**
+  <% else %>
+    <%= f.radio_button :method,'Linear' %>Linear
+    <br>
+    <%= f.radio_button :method,'Degressive'%>Degressive
+  <% end %>                 
 </div>
 
 ************************************************************************************************************
@@ -132,19 +98,14 @@ Q) to download Image attachments
   <%end%>
 <%end%>
 
-
 Q) collection select in a show page
-
 remove multiple: true if we want collection select, otherwise it will have an option to select multiple
-
  <%= select_tag :user_id,options_for_select(@l1users.collect{ |u| [User.find(u.user_id).name, u.user_id] }), {:include_blank => 'Select',multiple: true, class: "form-control"}  %>
 
 Q) to expire the session after some time, write this in config/initializers/session_store.rb
 Rails.application.config.session_store :cookie_store, key: '_Example_session', expire_after: 15.minutes
 
-
 Q) Will Paginate Gem Documentation
-
 1) Copy the gem 'will_paginate', '~> 3.1.0' onto Gem file
 2) Run Bundle install
 3) Go to the required index action of the respected controller and write 
@@ -155,8 +116,6 @@ Q) Will Paginate Gem Documentation
 
 Q) Dropdown menu user profile linking--we are adding html_safe to render using link_to
 <li><%=link_to ('<i class="fa fa-user" aria-hidden="true"></i> My Profile').html_safe,my_profile_path%></li>
-
-
 
 Q) Index Page Records filtering using jquery
 https://m.patrikonrails.com/how-to-make-ajax-calls-the-rails-way-20174715d176
@@ -259,33 +218,23 @@ def sale_or_purchase_preview
     end
   end
 end
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 https://medium.com/
-
 Q) Show and Hide the div by using check box
 https://www.aspsnippets.com/Articles/Show-Hide-DIV-with-TextBox-when-CheckBox-is-checked-unchecked-using-JavaScript-and-jQuery.aspx
 ==============================================================================================================
-Q) For new installations you should be running rake db:schema:load, not rake db:migrate, this will load the schema into the database, which is faster than running all the migrations.
-
+Q) For new installations you should be running rake db:schema:load, not rake db:migrate, 
+this will load the schema into the database, which is faster than running all the migrations.
 =============================================================================================================
 paasing a param from index page
 <%= link_to 'Show',inventories_product_path(product.id,type: "product_varient"),class: 'btn btn-warning' %>
-
 ==============================================================================================================
-
 if a record is not found, then we can handle the exception as in the application controller,
 rescue_from ActiveRecord::RecordNotFound, :with => :render_404
 
 create a method as render_404 as mentioned in :with
 then you can render template or redirect to any other action
-
 link: https://stackoverflow.com/questions/32328074/how-to-handle-error-when-id-is-not-found
-=============================================================================================================
-http://www.rubydoc.info/github/CanCanCommunity/cancancan/CanCan/Ability
-
-https://app.codility.com-->online ruby interview tests
-
 ============================================================================================================
 Has and Belongs to Many Association Example:
 
@@ -300,11 +249,11 @@ rails g migration BranchUser
 
 class BranchUser < ActiveRecord::Migration[5.1]
   def change
-  	create_table :branches_users do |t|
-    	t.belongs_to :branch, index: true
-      	t.belongs_to :user, index: true
-      	t.boolean :is_active, default: true
-      	t.timestamps
+    create_table :branches_users do |t|
+      t.belongs_to :branch, index: true
+      t.belongs_to :user, index: true
+      t.boolean :is_active, default: true
+      t.timestamps
     end
   end
 end
@@ -314,9 +263,9 @@ in the user form,
 
 in the controller, params as :branch_ids=>[]
 def set_user_params
-	params.require(:user).permit(:email, :name, :company_id, :language_id, :timezone, :notifications,
-		:signature, :password,:role_id, :password_confirmation, :profile_pic, :department_id, :designation_id, :reporting_manager_id,
-		user_app_role_attributes: [:id, :user_id, :role_name, :app_id],:branch_ids=>[])
+  params.require(:user).permit(:email, :name, :company_id, :language_id, :timezone, :notifications,
+    :signature, :password,:role_id, :password_confirmation, :profile_pic, :department_id, :designation_id, :reporting_manager_id,
+    user_app_role_attributes: [:id, :user_id, :role_name, :app_id],:branch_ids=>[])
 end
 
 for namescoped models
@@ -326,23 +275,23 @@ we have two models having namespace as accounting
 
 one is,
 class Accounting::AccountTax < ApplicationRecord
-	has_and_belongs_to_many :group_taxes,:class_name=>'Accounting::GroupTax',:join_table=>'accounting_account_tax_group_taxes', optional: true
+  has_and_belongs_to_many :group_taxes,:class_name=>'Accounting::GroupTax',:join_table=>'accounting_account_tax_group_taxes', optional: true
 end
 
 second one is,
 class Accounting::GroupTax < ApplicationRecord
-	scope :active, ->{where(is_active: true)}
-	has_and_belongs_to_many :account_taxes,:class_name=>'Accounting::AccountTax',:join_table=>'accounting_account_tax_group_taxes', optional: true
+  scope :active, ->{where(is_active: true)}
+  has_and_belongs_to_many :account_taxes,:class_name=>'Accounting::AccountTax',:join_table=>'accounting_account_tax_group_taxes', optional: true
 end
 
 created a join table like below.
 class AccountTaxGroupTax < ActiveRecord::Migration[5.1]
   def change
-  	create_table :accounting_account_tax_group_taxes do |t|			
-	  	t.integer :account_tax_id
-			t.integer :group_tax_id
-			t.integer :created_by
-			t.integer :modified_by
+    create_table :accounting_account_tax_group_taxes do |t|			
+      t.integer :account_tax_id
+      t.integer :group_tax_id
+      t.integer :created_by
+      t.integer :modified_by
       t.boolean :is_active, default: true
       t.timestamps
     end
@@ -365,9 +314,9 @@ i'm adding in collection checkboxes to form as below.
 </div>
 
 in my controller, i'm passing params as like below.
-params.require(:accounting_group_tax).permit(:id,:name,:amount,:create_by,:modified_by,:is_active,:account_tax_ids=>[])
+params.require(:accounting_group_tax).permit(:id,:name,:amount,:create_by,:modified_by,:is_active,
+:account_tax_ids=>[])
 ============================================================================================
-
   var form =  $('#formpayment').get(0);
   var formdata = new FormData(form);
   alert (JSON.stringify(formdata)); 
@@ -375,21 +324,16 @@ params.require(:accounting_group_tax).permit(:id,:name,:amount,:create_by,:modif
 https://medium.com/react-on-rails
 ============================================================================================
 sk@ubuntu-desktop3:~$ gem list
-
 gem list will list out all the gems that are installed in our system.
-
 ============================================================================================
 we have migration timestamps at schema migrations.
-if we generated a migration and it's not creating a table, then we should have to check out the schema migrations.if any previous migration exists with the same table name then we have to remove the previous timestamp row then run rake db:migrate
-============================================================================================
-https://learndigital.withgoogle.com/digitalunlocked/?dclid=CLriz7qft9oCFQgeaAodQAADQQ&gclid=EAIaIQobChMIvOzukp-32gIVxo5oCh0yPwLpEAEYASAAEgK2JfD_BwE
-
+if we generated a migration and it's not creating a table, then we should have to check out the 
+  schema migrations.if any previous migration exists with the same table name then we have to remove 
+  the previous timestamp row then run rake db:migrate
 ============================================================================================
 Calling Cocoon Before and After Functions Examples:
-
 In Your View 
 Nested Form Below
-
  <div class="col-md-12 table-responsive"  id="pol_item">
     <fieldset id="recipe-ingredients">
     <% @i=0 %>
@@ -405,7 +349,8 @@ Nested Form Below
    </fieldset>
   </div>
 
-id="pol_item" is the id in the calling doc ready function--><div class="col-md-12 table-responsive"  id="pol_item">
+id="pol_item" is the id in the calling doc ready function--><div class="col-md-12 table-responsive"  
+id="pol_item">
 and you can call in document ready function like this
 
 $(document).ready(function() {
@@ -413,7 +358,6 @@ $(document).ready(function() {
     getNullAmounts();
   });
 });
-
 ============================================================================================
 <button id="callConfirm">Confirm!</button>
 
@@ -452,14 +396,11 @@ if we are entering 0010 in a text field,while calculating the amount it will tak
 we have to replace the given string as below.
 
 str.replace(/^0+(?!\.|$)/, '')
-
   '0000.00' --> '0.00'   
      '0.00' --> '0.00'   
   '00123.0' --> '123.0'   
         '0' --> '0'
-
 ============================================================================================
-
 <div class="col-xs-3 panel_checkbox">
   <%= f.collection_check_boxes(:user_ids, User.active, :id, :name, checked: User.active.try(:user_ids)) do |user|%>
      <div class="checkbox checkbox-success checkbox-circle panel_check">
@@ -488,7 +429,6 @@ def get_amount
   end
   render json:amount.to_json
 end
-
 ==============================================================================================
 https://stackoverflow.com/questions/2155622/get-a-list-of-checked-checkboxes-in-a-div-using-jquery
 http://jsfiddle.net/dvCmR/
@@ -508,27 +448,6 @@ function checkSum(obj){
 
   });
 }
-============================================================================================
-https://medium.com/programming-problem-solving-logbook/rails-multiple-checkboxes-e9c4c7fda356
-https://stackoverflow.com/questions/9400736/passing-rails-variable-in-a-onclick-function-of-check-box-tag
-============================================================================================
-https://www.quora.com/in/Where-can-I-find-practice-exercises-problems-for-Ruby-and-Rails
-http://www.codequizzes.com
-============================================================================================
-https://deepakrip007.wordpress.com/2013/10/04/implementing-data-table-in-rails/
-https://deepakrip007.wordpress.com/2013/11/05/google-integration-using-devise-and-omniauth-in-rails-app/
-============================================================================================
-https://thinkster.io/tutorials/fullstack
-http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
-https://medium.com/aviabird/guide-to-install-mongodb-on-ubuntu-14-04-9ed292dc53f6
-============================================================================================
-puts "Enter the height:"
-count = gets.chomp.to_i
-count.times do |n|
- print ' ' * (count - n)
- puts ' *'* (1 * n + 1)
-end
-Ruby Triangle
 ============================================================================================
 1) Create table product_categories_bkp_06062018 as
 select * from product_categories

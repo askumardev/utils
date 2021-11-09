@@ -86,3 +86,20 @@ https://rubyinrails.com/2014/03/17/what-is-attr_accessor-in-rails/
 https://rubyinrails.com/
 https://www.sitepoint.com/generate-excel-spreadsheets-rails-axlsx-gem/
 ===========================================================================================
+https://medium.com/programming-problem-solving-logbook/rails-multiple-checkboxes-e9c4c7fda356
+https://stackoverflow.com/questions/9400736/passing-rails-variable-in-a-onclick-function-of-check-box-tag
+============================================================================================
+https://www.quora.com/in/Where-can-I-find-practice-exercises-problems-for-Ruby-and-Rails
+http://www.codequizzes.com
+============================================================================================
+https://deepakrip007.wordpress.com/2013/10/04/implementing-data-table-in-rails/
+https://deepakrip007.wordpress.com/2013/11/05/google-integration-using-devise-and-omniauth-in-rails-app/
+============================================================================================
+https://thinkster.io/tutorials/fullstack
+http://www.bradoncode.com/tutorials/learn-mean-stack-tutorial/
+https://medium.com/aviabird/guide-to-install-mongodb-on-ubuntu-14-04-9ed292dc53f6
+============================================================================================
+https://learndigital.withgoogle.com/digitalunlocked/?dclid=CLriz7qft9oCFQgeaAodQAADQQ&gclid=EAIaIQobChMIvOzukp-32gIVxo5oCh0yPwLpEAEYASAAEgK2JfD_BwE
+============================================================================================
+http://www.rubydoc.info/github/CanCanCommunity/cancancan/CanCan/Ability
+https://app.codility.com-->online ruby interview tests
