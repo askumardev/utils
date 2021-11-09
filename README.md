@@ -32,7 +32,7 @@
 * rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript (creates app without webpacker)
 
 ## database.yml
-development:\
+development:
 >  adapter: postgresql\
 >  encoding: unicode\
 >  database: todo_App_Api_dev\
@@ -40,7 +40,7 @@ development:\
 >  username: postgres\
 >  password: postgres
 
-test:\
+test:
 >  adapter: postgresql\
 >  encoding: unicode\
 >  database: todo_App_Api_test\
