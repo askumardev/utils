@@ -31,21 +31,21 @@
 * rails new myApp -d postgresql (creates app with webpacker)
 * rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript (creates app without webpacker)
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: todo_App_Api_dev
-  pool: 5
-  username: postgres
-  password: postgres
+development:\
+  adapter: postgresql\
+  encoding: unicode\
+  database: todo_App_Api_dev\
+  pool: 5\
+  username: postgres\
+  password: postgres\
 
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: todo_App_Api_test
-  pool: 5
-  username: postgres
-  password: postgres
+test:\
+  adapter: postgresql\
+  encoding: unicode\
+  database: todo_App_Api_test\
+  pool: 5\
+  username: postgres\
+  password: postgres\
 
 #PG db restoration commands
 * Open terminal
