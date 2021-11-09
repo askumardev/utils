@@ -31,6 +31,7 @@
 * rails new myApp -d postgresql (creates app with webpacker)
 * rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript (creates app without webpacker)
 
+### database.yml
 development:\
   adapter: postgresql\
   encoding: unicode\
