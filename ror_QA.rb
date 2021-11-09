@@ -139,7 +139,8 @@ Q: What is the highest level in the object model in Ruby 1.9+?
 A: BasicObject
 
 Q: Is everything in Ruby an object?
-A: No. Methods are not objects. Blocks are not objects. Keywords are not objects. However, there exist Method objects and Proc objects, and some keywords refer to objects.
+A: No. Methods are not objects. Blocks are not objects. Keywords are not objects. However, there exist Method objects and Proc objects, 
+  and some keywords refer to objects.
 
 Q: Which core object includes the Kernel module?
 A: Object
@@ -148,7 +149,8 @@ Q: What can you say about an identifier that begins with a capital letter?
 A: It is a constant.
 
 Q: What does DSL stand for and why does it come up when describing Ruby?
-A: A Domain Specific Language is an API that allows you to solve a problem or represent data more naturally than you could otherwise. The flexible nature of Ruby's syntax and the ability to alias and alter existing methods and classes makes it conducive to creating DSL's.
+A: A Domain Specific Language is an API that allows you to solve a problem or represent data more naturally than you could otherwise. 
+  The flexible nature of Ruby's syntax and the ability to alias and alter existing methods and classes makes it conducive to creating DSL's.
 
 Q: What is duck typing and how does it apply to Ruby?
 A: That an object may be acted upon even if it isn't the expected type as long as it looks and behaves like the expected object. 
