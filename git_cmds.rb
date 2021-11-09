@@ -1,3 +1,14 @@
+
+Use to remove branch remotely: 
+git push origin --delete income_networth
+
+====================================================
+Use to remove branch locally
+git branch -D powerbi_public_token
+-----------------------------------------------------
+
+PR raise comments
+----------------
 Purpose of this PR
 This pull request implements SCF-1143. The following changes have been implemented:
 
@@ -8,7 +19,7 @@ Testing status (if applicable)
  All tests passed
 Jira Updated
  Actual time updated
-
+----------------------------------------------------------------
 Purpose of this PR
 This pull request implements RBFECR-977. The following changes have been implemented:
 We see associated errors on server side when user retries the buy option:  Tickets translation missing: sv.activemodel.errors.models.payment.attributes.tickets.ticket_bought. 
