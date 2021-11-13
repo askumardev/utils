@@ -25,3 +25,12 @@ This pull request implements RBFECR-977. The following changes have been impleme
 We see associated errors on server side when user retries the buy option:  Tickets translation missing: sv.activemodel.errors.models.payment.attributes.tickets.ticket_bought. 
 
 Add literal for swedish message for ticket_bought: 'have already been bought'
+==============================================================================
+Brad Cmds:
+------------
+514572567d8e6d20261f4a2f46f440ee9187fe39
+
+
+GH_TOKEN=514572567d8e6d20261f4a2f46f440ee9187fe39 flash_flow --no-merge
+
+tail -f log/flash_flow.log
