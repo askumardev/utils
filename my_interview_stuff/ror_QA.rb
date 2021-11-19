@@ -894,4 +894,95 @@ A: Symbols.
 
 Q: What module in the standard library enables English language alternatives to terse global variables?
 A: English
+=============================================================================================================
+Inteview question and answers
+
+
+1)Why is use ruby on rails
+
+  Because it provide dry principle, gems and plugin, convention over configration, pure object orinted 
+
+2) What is Gems and plugin
+
+
+    Gems and plugin provide same functionality but main differnce between is if want upgrade gem then easily upgraded but plugin not upgraded we need uninstall then install new version of plugin.
+Gems is package , provide bunch of class and helper file some application.When we install gem thne it is available to all other ruby application but when we installing plugin then it is availble to the specific application because it install on the application folder such /app/vender/plugin.
+
+
+3) What is differnce between render and redirect ?
+   
+   redirect send new request to the browser but render dosn't send new request to the browser, it use existing request.
+
+4) What is form_tag and form_for
+
+  form_for is used for model speific and form_tag is not model specifi submit data 
+
+
+5) What is differnce between class and module?
+
+  Class and module behave same but class is instainced dule doesn't instianced. When we want to use module method  to other class then this include moudle in your class then this mehod is available for us.
+
+
+6) How to use construcator in ruby?
+
+  We can declare initialize method and call when new object is created.
+
+7) What is differnce between string and symbol
+
+  String is mutuble and symbol is immutable .
+
+8) What is different component in rails
+
+Action Controller: it is the component that manages all other controllers and process the incoming request to the Rails application.
+It extracts the parameters and dispatches the response when an action is performed on the application.
+ It provides services like session management, template rendering and redirect management.
+
+Action View: it manages the views of the Rails application and it creates the output in both HTML and XML format.
+ It also provides the management of the templates and gives the AJAX support that is being used with the application.
+
+Active Record: It provides the base platform for the models and gets used in the Rails application. It provides the database independence, CRUID functionality, search capability and setting the relationship between different models.
+
+Action Mailer: It is a framework that provides email services to build the platform on which flexible templates can be implemented. 
+
+
+9) What is association in rails?
+
+  Using assoication we can define relation to the model.There are four type of assication in rails
+one to one, ont to many , many to one and many to many
+
+10) Differnce between belongs_to and has_one association?
+  Using belongs_to and has_one association define one to one relatioship between two model
+  has_one association looks at where foreign key is. 
+
+11) what is block , proc and lambda
+  Block is ruby code. We can declare using curle bracket or do end statement. When want different block is used multiple times then use proc.Proc dosn't check argument passing
+Lambda is similar to the Proc but it check argument passing.
+
+12) How to connect two database to one rails appication
+  We can specify in yml file for database configration and change adapter , specify other details
+
+13) What is require and load in rails
+
+ When we use laod , it load class and libray into menmroy , laod will call multiple time when we invoke method or class. Requrire  is jsut place onto the file or floder , it call one time .
+
+API vs SDK
+
+API = Application Programming Interface
+Communication between service to service or app to app. 
+Ex.SOAP, GraphQL,REST. Has request and response
+Request is url/.... Can have parameters.
+Response will be a json object
+SDK = Software Development Kit
+Toolbox which calls API. Code call a api . Response will be a object.
+
+
+
+
+
+
+
+
+
+
+
 

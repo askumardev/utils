@@ -1,0 +1,195 @@
+
+1. Load and outer load in ruby
+2. Difference between load and require in ruby.
+3. what is prepend in ruby
+4. difference between require, extend and include in ruby.
+5. Find method definition in ruby.
+6. singleton class in ruby
+7. outer joins
+8. optimistic locking and pessimistic in rails
+9. using form object in ruby
+10. single responsibility principle in ruby.
+11. SOLID principles
+12. concept of coupling and cohesion
+13. security tools for ruby on rails
+14. what is legacy code in ruby.System test.
+============
+Somethings should be done on m/c, few can be done and shown on paper.
+
+Ruby
+1. How to benchmark in ruby?
+2. Count duplicate elements in ruby array? 
+duplicates = ["aa","bb","cc","bb","bb","cc"]
+at last give hint, it should be in format  {"aa"=>1, "bb"=>3, "cc"=>2} 
+3. Example of include/extend usage within a class.
+4. Fibonacci program
+5. Before filter example
+6. Create a file, read the file, write some content to it.
+7.  var1 = 'hi '
+    var2 = var1
+    var2 << "123"
+
+output of var1 ?
+
+
+Linux
+1. Symblink example
+2. Import and export dump mysql/postgres
+
+
+Rails
+1. Write a AR query within transaction block
+2. Raw query to find second higest value.
+3. One User can have many posts, create table structure and how to relate this in rails.
+4. Create n+1 query problem and solve it.
+5. Call backs example.
+6. Model.any? what is the query run
+
+
+
+
+
+
+
+Machine task:-
+=============
+For 1 to 4 years exp
+
+  1.Create a rails forum application where a user can post an article, other users comment, like, dislike aritle, sharing etc. 
+For each operation user should get mail.
+
+  2.Create a rails social networking application where users can become friends and commnicate with other over chats
+
+  3.Create a rails e-commerce application where user should be able to add to cart and able to buy using any sandbox payment method.
+
+
+For 4+ years exp
+
+  1. Along with above, this deverloper should be able to write test cases(RSPEC), any caching technique,using any advanced js 
+framework(angular or backbone js etc..) and mongo db(if he/she know).
+
+
+
+  Database:-
+  ==========
+
+=> Get salary of highest 10th paid employee in a company  
+
+=>Diff b/w myisam and innodb engines in mysql
+
+	Myisam:(befor 5.5.5 default engine for mysql)
+	      Table level locking
+	      No ordering in storage of data 
+	      Not *ACID compliant,no foreign key support and non-transactional
+	      reading records fast
+
+	Innodb:(default as of 5.5.5)
+	      Row level locking
+	      Row data stored in pages in PK order
+	      *ACID compliant and hence fully transactional with ROLLBACK and COMMIT and support for Foreign Keys
+	      reading records slow
+
+
+=>Diff b/w primary key vs unique key?
+	A primary key must be unique.
+
+	A unique key does not have to be the primary key - see candidate key.
+
+	That is, there may be more than one combination of columns on a table that can uniquely identify a row - only one of these can be selected as the primary key. The others, though unique are candidate keys.
+
+	 there can be only one primary key for a given table, while there can be many unique keys.
+
+	 primary key cannot be NULL
+
+ 
+ =>diff b/w mysql and postgresql?
+	 dates format different
+
+	mysql:
+	 #comment
+	 "
+	 case insensitive
+	 Only follows some of the ANSI SQL standards
+	 Faster
+	 No Foreign key support
+	 No Sub-selects
+	 Transactions  with innodb engine only
+
+
+	 postgresql:
+	 -- comment(ANSI standard)
+	 '
+	 case sensitive
+	 Slower
+	 Closer to ANSI SQL standard
+	 Have Foreign key support
+	 Have Sub-selects
+	 Have Transactions support
+ 
+
+
+ =>rdbms vs nosql?
+RDBMS is completely structured way of storing data.NoSQL databases also have a structure to store data, but these structures are less 
+strict as relational schema, so it became a better choice to some applications.
+the amount of data stored mainly depends on the Physical memory of the system. While in the NoSQL you don't have any such limits as 
+you can scale the system horizontally.
+It's important to say that NoSQL databases are a complement in database field, and not a replacement for RDBMS.
+Graph Databases is also a very popolar NoSQL database. . Examples of the popular graphical database are Neo4j,
+ OrientDB, InfiniteGraph, AllegroGraph etc.
+Facebook uses open sources the Cassandra
+NoSQL stands for "Not only SQL"
+E.g. graph databases like Neo4j, document databases like CouchDB and object databases like db4o.
+
+
+=>postgresql backup
+ $ pg_dump mydb > db.sql #To dump a database called mydb into a SQL-script file:
+ $ psql -d newdb -f db.sql  #To reload such a script into a (freshly created) database named newdb:
+
+
+=>join vs include in sql?
+The difference between joins and include is that using the include statement generates a much larger SQL query loading into memory all the attributes from the other table(s).
+For example, if you have a table full of comments and you use a :joins => users to pull in all the user information for sorting purposes,
+ etc it will work fine and take less time than :include, but say you want to display the comment along with the users name, email, etc. 
+To get the information using :joins, it will have to make separate SQL queries for each user it fetches, whereas if you used :include this information is ready for use.
+
+:joins returns read-only objects, :includes does not
+
+:joins uses inner join, :includes uses outer join.
+
+the main reason of :includes is eager loading, to avoid the N+1 problem of loading in attributes of each object using a separate query.
+
+
+
+=>query to check mysql engine name?
+SELECT table_schema,engine FROM information_schema.tables WHERE table_name='resources';
+
+
+$mysql> SELECT * FROM mysql.user;      ==>to find list of users for mysql database
+http://www.pantz.org/software/mysql/mysqlcommands.html    ======>mysql commands
+
+
+=>Rename mysql database name?
+mysqldump -u username -p -v olddatabase > olddbdump.sql
+mysqladmin -u username -p create newdatabase
+mysql -u username -p newdatabase < olddbdump.sql
+
+
+
+
+
+
+
+Javascritpt:-
+=============
+
+=>What is the use of isNaN function?
+isNan function returns true if the argument is not a number otherwise it is false.
+
+
+
+
+
+
+
+
+
