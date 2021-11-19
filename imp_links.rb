@@ -103,3 +103,5 @@ https://learndigital.withgoogle.com/digitalunlocked/?dclid=CLriz7qft9oCFQgeaAodQ
 ============================================================================================
 http://www.rubydoc.info/github/CanCanCommunity/cancancan/CanCan/Ability
 https://app.codility.com-->online ruby interview tests
+---------------------------------------------------------------------------------------------
+https://dev.to/javascriptacademy/form-validation-using-javascript-34je
