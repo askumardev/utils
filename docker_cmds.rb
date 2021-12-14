@@ -29,3 +29,7 @@ ip -a
 ip addr show
 sudo docker ps
 sudo docker exec -it e6fd9cbeda6c bash
+==============================================
+docker version
+docker pull hello-world
+docker run hello-world
