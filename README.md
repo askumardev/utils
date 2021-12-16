@@ -1,7 +1,7 @@
 # utils
 ## ntfs commands
-* sudo ntfsfix /dev/sda6
-* sudo ntfsfix /dev/sda5
+* `sudo ntfsfix /dev/sda6`
+* `sudo ntfsfix /dev/sda5`
 ## Ruby Installation:
 * gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 * curl -sSL https://get.rvm.io | bash -s stable --ruby
@@ -31,8 +31,8 @@
 
 
 ## Rails app creation: 
-* rails new myApp -d postgresql (creates app with webpacker)
-* rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript (creates app without webpacker)
+* `rails new myApp -d postgresql` (creates app with webpacker)
+* `rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript` (creates app without webpacker)
 
 ## database.yml
 development:
@@ -52,6 +52,7 @@ test:
 >  password: postgres
 
 ## PG db restoration commands
+* Go to folder where dump file is present
 * Open terminal
 * sudo su postgres
 * createdb sample_db;
