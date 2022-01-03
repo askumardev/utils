@@ -31,7 +31,7 @@
 
 
 ## Rails app creation:
-* 'rails _5.2.6_ new univ_app' (for using a specific rails version)
+* `rails _5.2.6_ new univ_app` (for using a specific rails version)
 * `rails new myApp -d postgresql` (creates app with webpacker)
 * `rails new todoAppApi -d postgresql --skip-webpack-install –skip-javascript` (creates app without webpacker)
 
