@@ -74,6 +74,11 @@ test:
 * Enter postgres password
 * psql -U postgres sample_db < sample_db_dump;
 
+## postgres terminal cmds
+* sudo -i -u postgres
+* psql
+* \l
+
 ## docker cmds
 Installation cmds:
 * sudo apt-get remove docker docker-engine docker.io
