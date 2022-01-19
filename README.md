@@ -75,7 +75,7 @@ test:
 * psql -U postgres sample_db < sample_db_dump;
 
 ## docker cmds
-Installation cmds
+Installation cmds:
 * sudo apt-get remove docker docker-engine docker.io
 * sudo apt-get update
 * sudo apt install docker.io
@@ -83,25 +83,30 @@ Installation cmds
 * sudo apt purge snapd && sudo apt install snapd
 * sudo snap install docker
 * sudo apt-get install docker
+
+Version check:
 * docker --version
 
-* sudo docker run hello-world
+Pulling an image and running an image
+* docker pull hello-world
+* docker run hello-world
+* docker pull nginx
+* docker run -it nginx
+* docker run -itd nginx
+
+Docker images related cmds:
 * docker
+* docker images
+* sudo docker ps
 * sudo docker ps -a
 * pwd
 * where is docker
 * ps -ef
 * ps -ef | grep docker
-* docker images
-* sudo docker images
-* sudo docker pull nginx
-* sudo docker run -it nginx
-* sudo docker ps
-* sudo docker run -itd nginx
-* sudo docker ps
+
 * ifconfig
 * ip -a
 * ip addr show
-* sudo docker ps
-* sudo docker exec -it e6fd9cbeda6c bash
+
+* docker exec -it e6fd9cbeda6c bash
 
