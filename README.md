@@ -74,3 +74,7 @@ test:
 * Enter postgres password
 * psql -U postgres sample_db < sample_db_dump;
 
+## docker cmds
+* docker --version
+* sudo docker run hello-world
+
