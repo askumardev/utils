@@ -34,3 +34,9 @@ Brad Cmds:
 GH_TOKEN=514572567d8e6d20261f4a2f46f440ee9187fe39 flash_flow --no-merge
 
 tail -f log/flash_flow.log
+-------------------------------------------------------------------------------
+git tags are to be created on master
+git tag  --> to list all existing tags
+git tag v1.4 --> tag creation
+git push origin v1.4 --> pushing tag
+
