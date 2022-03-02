@@ -71,4 +71,36 @@
 10)How many ways to invoke a method with examples
 ===========================================================
 1)String vs Symbols
-2)
+2)What is schema versioning in rails ?when does it change?
+3)What are reversible migrations?
+4)how to run/rollback a specific migration in rails?
+5)When to use an up and down method insted of a change method inside ur migration with example.
+6)what is shallow nesting of routes and when is preferable to use this?
+7)What is meta programming in ruby and explain how to implement this in ur program.
+8)what is inject method in ruby?
+9)equal? vs eql? in ruby
+10)what is Advantage of hash over an array in ruby
+============================================================
+1)iterators vs loops in ruby
+2)what are accessor methods in ruby?list and explain.
+3)What are class level and module level attributes?
+4)include vs extend in rails
+5)What are template engines supported by rails?Which one is ur preference and why?
+6)What is singleton/Eigen class in ruby?
+7)When is the right time to define a helper method inside a rails controller?
+8)Explain what do u understand by DRY Code?
+9)What is ur approach to write a thin controller?Why should it be thin?Name its advantages.
+10)purpose of initializers directory in rails application.
+==================================================================
+1)Gem vs rails engine.
+2)What is rails engine and when to us a rails engine?List few gems 
+  which are engines as well.
+3)Is it possible to use 2 identical keys in a hash and explain what happens if u use 2 identical keys in a hash?
+4)best way to define foreign key into an existing rails table.
+5)How many rails versions u worked and list changes between rails versions u worked.
+6)Array vs Enumerator
+7)What is ur preference for return response for an API? JBbulder or ActiveModel serializer. Why?
+8)proc vs lambda
+9)What are argumented scopes and when to implement them?
+10)update vs update_attribute
+================================================================
