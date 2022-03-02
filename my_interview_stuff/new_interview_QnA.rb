@@ -104,3 +104,13 @@
 9)What are argumented scopes and when to implement them?
 10)update vs update_attribute
 ================================================================
+1):allow_nil vs :allow_blank validation options.
+2)strict and conditional validations
+3)when to skip callbacks.list few of the methods to skip callbacks.
+4)Is it possible to send emails without rendering template. if yes how?
+5)deliver_now vs deliver_later for sending emails.
+6)what is upsert?
+7)What is session storage in rails and explain.
+8)What is session hijackingin rails and explain.
+9)main features asset pipelining.
+10)page cacheing vs action cacheing vs fragment cacheing
