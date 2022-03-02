@@ -1,3 +1,4 @@
+=======================Section-1===================================
 1)diff btn has many through and habtm? also which is better?
 2)what are validations in rails? at what moment of objects life cycle validations are checked?
 3)what do u mean by polymorphic association?when can one use this association?
@@ -8,7 +9,7 @@
 8)what is STI? what are advantages and disadvntages.
 9)what are migrations in rails?what is the usage of rails migratins
 10)what do u mean by N+1 query? how can we resolve N+1 query with example.
-==========================================================
+========================Section-2==================================
 1)difference between includes adn joins
 2)what do u mean by self_join association in rails
 3)what do u mean by ORM? explain
@@ -20,7 +21,7 @@
 8)what are member and collection routes and explain
 9)what do u knpw about namespace and scoped routing. what are the differences between them
 10)explain difference between webpacker and sprockets?
-=======================================================
+========================Section-3===============================
 1)how many associations in rails?
 2)what do u mean by partials in rails? explain usage of partials 
   and way we can pass local variables to a partial.
@@ -33,7 +34,7 @@
 8)what is difference between a sidekiq worker and rails activejob?
 9)what do mean by rale tasks ? how can u define/implement custom rake tasks?
 10)what do u know about ActiveStorage? How can u use this?
-=========================================================
+=========================Section-4================================
 1)Explain strong parameters.
 2)How do u pass default arguments to a controller where u can instantiate a new model object?
 3)What are turbolinks into rails?
@@ -45,7 +46,7 @@
 8)Explain routing in rails.
 9)what are filter actions and controller callbacks. Explain
 10)How can u handle ActiveRecord::RecordNotFound exception fora all resources?
-===============================================================
+===========================Section-5====================================
 1)How many gems for the admin backend have u used? Which gem is better and why?
 2)If u are asked to implement an admin backend for ur web application what solution will you propose?
   Any  gem or custom admin panel and also explain reason?
@@ -57,7 +58,7 @@
 8)How many formhelpers are provided by rails? Tell names and differences btween them.
 9)delete vs destroy in rails
 10)How to organize controllers? How to make a controller thin?
-==============================================================
+===========================Section-6===================================
 1)What do u mean by sessions in rails?Explain in what circumstances do u need to use sessions?
 2)What is find_each method in rails? Also explain why the .all method is not ideak to use for loading all the instances
   of a model at once.
@@ -69,7 +70,7 @@
 8)What is yield in ruby? What happens if u call a method, which includes yield, without passing a block?
 9)Hash vs HashWithIndifferentAccess
 10)How many ways to invoke a method with examples
-===========================================================
+=========================Section-7==================================
 1)String vs Symbols
 2)What is schema versioning in rails ?when does it change?
 3)What are reversible migrations?
@@ -80,7 +81,7 @@
 8)what is inject method in ruby?
 9)equal? vs eql? in ruby
 10)what is Advantage of hash over an array in ruby
-============================================================
+===========================Section-8=================================
 1)iterators vs loops in ruby
 2)what are accessor methods in ruby?list and explain.
 3)What are class level and module level attributes?
@@ -91,7 +92,7 @@
 8)Explain what do u understand by DRY Code?
 9)What is ur approach to write a thin controller?Why should it be thin?Name its advantages.
 10)purpose of initializers directory in rails application.
-==================================================================
+============================Section-9======================================
 1)Gem vs rails engine.
 2)What is rails engine and when to us a rails engine?List few gems 
   which are engines as well.
@@ -103,7 +104,7 @@
 8)proc vs lambda
 9)What are argumented scopes and when to implement them?
 10)update vs update_attribute
-================================================================
+============================Section-10====================================
 1):allow_nil vs :allow_blank validation options.
 2)strict and conditional validations
 3)when to skip callbacks.list few of the methods to skip callbacks.
@@ -114,3 +115,14 @@
 8)What is session hijackingin rails and explain.
 9)main features asset pipelining.
 10)page cacheing vs action cacheing vs fragment cacheing
+=============================Section-11======================================
+1)Does ruby support method overloading. justify
+2)What are modules? how to differentiate class and instance methods in a module
+3)after_save vs after_commit
+4)mixins in ruby
+5)send method in ruby
+6)sidekiq and its use
+7)basic version of sidekiq vs sidekiq pro
+8)perform vs perform_async in sidekiq
+9)let vs let! in RSpec
+10)What are callbacks. Explain for both model and controller.
