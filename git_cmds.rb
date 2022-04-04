@@ -1,4 +1,7 @@
-
+If authentication error comes use ssh instead of https in git
+git remote -v
+git remote set-url origin git@github.com:ask***rdev/****.git
+---------------------------------------------------------------
 Use to remove branch remotely: 
 git push origin --delete income_networth
 
