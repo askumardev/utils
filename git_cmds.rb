@@ -1,3 +1,18 @@
+Installation & config steps:
+sudo apt install git
+git --version
+
+git config --global user.name "ask***rdev"
+git config --global user.email "ask***r.dev@***look.com"
+git config --list
+
+mkdir $HOME/.ssh
+chmod 700 $HOME/.ssh
+cd ~/.ssh
+ssh-keygen -o -t rsa -C "askumar.dev@outlook.com"
+cat id_rsa.pub
+Copy the above token an place in github account under Settings/SSH and GPG keys
+
 If authentication error comes use ssh instead of https in git
 git remote -v
 git remote set-url origin git@github.com:ask***rdev/****.git
