@@ -4,6 +4,7 @@
 * `sudo ntfsfix /dev/sda5`
 
 ## in .bash_aliases
+### gedit ~/.bash_aliases
 alias r2='rvm use --default 2.5.8'\
 alias r3='rvm use --default 3.0.0'\
 alias rl='rvm list'\
