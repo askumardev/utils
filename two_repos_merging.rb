@@ -1,7 +1,7 @@
 # Create a branch in first repo to pull the changes from second repo.
 ➜  repo1 git:(main) git checkout -b new_merger
 Switched to a new branch 'new_merger'
-➜  repo1 git:(new_merger) git remote add new_merger https://github.com/askumardev/repo2.git
+➜  repo1 git:(new_merger) git remote add new_merger https://github.com/sk534/repo2.git
 ➜  repo1 git:(new_merger) git pull new_merger master --allow-unrelated-histories
 
 ➜  repo1 git:(new_merger) git status
