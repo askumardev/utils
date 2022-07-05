@@ -90,17 +90,17 @@ Installation cmds:
 * sudo snap install docker
 * sudo apt-get install docker
 
-Version check:
+## Version check:
 * docker --version
 
-Pulling an image and running an image
+## Pulling an image and running an image
 * docker pull hello-world
 * docker run hello-world
 * docker pull nginx
 * docker run -it nginx
 * docker run -itd nginx
 
-Docker images related cmds:
+## Docker images related cmds:
 * docker
 * docker images
 * sudo docker ps
