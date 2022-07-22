@@ -30,6 +30,7 @@ Use to remove branch locally
 * git log
 * git shortlog
 * git shortlog -s
+* git log --stat
 
 
 Brad Cmds:
