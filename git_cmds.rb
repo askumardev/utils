@@ -1,6 +1,6 @@
-Installation & config steps:
-sudo apt install git
-git --version
+## Installation & config steps:
+* sudo apt install git
+* git --version
 
 git config --global user.name "ask***rdev"
 git config --global user.email "ask***r.dev@***look.com"
@@ -57,4 +57,6 @@ git tags are to be created on master
 git tag  --> to list all existing tags
 git tag v1.4 --> tag creation
 git push origin v1.4 --> pushing tag
+
+* git log
 
