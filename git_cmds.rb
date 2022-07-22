@@ -28,6 +28,8 @@ Use to remove branch locally
 
 ## to check logs:
 * git log
+* git shortlog
+* git shortlog -s
 
 
 Brad Cmds:
