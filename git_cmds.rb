@@ -32,6 +32,10 @@ Use to remove branch locally
 * git shortlog -s
 * git log --stat
 
+## Git remote commands::
+* git remote -v
+* git remote set_url origin https://github.com/username/repo.git
+
 
 Brad Cmds:
 ------------
