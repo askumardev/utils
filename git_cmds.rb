@@ -19,7 +19,7 @@ If authentication error comes use ssh instead of https in git
 ---------------------------------------------------------------
 
 # Remove branch remotely and locally
-Use to remove branch remotely: 
+Use to remove branch remotely:
 * git push origin --delete income_networth
 ====================================================
 Use to remove branch locally
@@ -42,6 +42,3 @@ git tags are to be created on master
 git tag  --> to list all existing tags
 git tag v1.4 --> tag creation
 git push origin v1.4 --> pushing tag
-
-
-
