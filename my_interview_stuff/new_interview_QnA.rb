@@ -126,3 +126,4 @@
 8)perform vs perform_async in sidekiq
 9)let vs let! in RSpec
 10)What are callbacks. Explain for both model and controller.
+=============================Section-12======================================
