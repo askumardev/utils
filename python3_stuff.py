@@ -18,5 +18,3 @@ create database DJAppdb;
 python manage.py startapp testDB
 python3 manage.py makemigrations
 python3 manage.py migrate
-
-
