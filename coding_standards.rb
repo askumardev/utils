@@ -11,8 +11,7 @@ Formatting
 •	Use empty lines to break up a long method into logical paragraphs.
 •	Keep lines shorter than 80 characters.
 •	Avoid trailing whitespace.
- 
-Syntax
+ Syntax
 •	Use def with parentheses when there are arguments.
 •	Conversely, avoid parentheses when there are none.
 •	Never use for, unless you exactly know why. Prefer each or loop.

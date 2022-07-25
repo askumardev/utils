@@ -1,6 +1,5 @@
 CSS Questions: 
 ==================================================================== 
-
 1)What is CSS?
 a)CSS is a standard for applying style to HTML elements. This styling includes margins, positioning, fonts, colors, and so forth. The styling can 
 	apply to the complete document or be granular and apply to a specific element. Theoretically, the use of CSS promotes the separation of content
