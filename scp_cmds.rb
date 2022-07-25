@@ -18,14 +18,12 @@ Bradmin admin
 
 scp /home/administrator/FF-git/bradmin/app/admin/investor_entity.rb /home/administrator/FF/bradmin-master/app/admin
 
-
 ----------------------------------------------------------------------------------
 Flashfunders local
 
 scp /home/xdocsdev/git_code/flashfunders/app/views/investment_flow/funds/_link_refund_account.html.haml administrator@192.168.5.222:/home/administrator/FF/flashfunders-master/app/views/investment_flow/funds
 
 scp /home/xdocsdev/git_code/flashfunders//home/xdocsdev/git_code/flashfunders/app/models/pitch/pdf.rb administrator@192.168.5.222:/home/administrator/FF/flashfunders-master2/app/models/pitch
-
 
 scp /home/xdocsdev/git_code/flashfunders/app/controllers/invest/investment_profiles_controller.rb administrator@192.168.5.222:/home/administrator/FF/flashfunders-master2/app/controllers/invest
 ===================================================================================
