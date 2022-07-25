@@ -11,7 +11,8 @@ Formatting
 •	Use empty lines to break up a long method into logical paragraphs.
 •	Keep lines shorter than 80 characters.
 •	Avoid trailing whitespace.
- Syntax
+
+Syntax
 •	Use def with parentheses when there are arguments.
 •	Conversely, avoid parentheses when there are none.
 •	Never use for, unless you exactly know why. Prefer each or loop.
@@ -32,7 +33,7 @@ Formatting
 •	Use ||= freely for memoization.
 •	When using regexps, freely use =~, -9, :math:`~, ` and $` when needed.
 •	Prefer symbols (:name) to strings where applicable.
- 
+
 Naming
 •	Use snake_case for methods.
 •	Use CamelCase for classes and modules. (Keep acronyms like HTTP, RFC and XML uppercase.)
