@@ -3,11 +3,9 @@ Docker Installation:
 sudo apt-get remove docker docker-engine docker.io
 sudo apt-get update
 sudo apt install docker.io
-sudo snap install docker
-sudo apt purge snapd && sudo apt install snapd
-sudo snap install docker
-sudo apt-get install docker
 docker --version
+
+sudo apt-get install docker-compose
 ---------------------------------------------------------
 Docker testing:
 ---------------
