@@ -72,6 +72,7 @@ test:
 >  password: postgres
 
 ## PG db restoration commands
+* sudo service postgresql stop
 * Go to folder where dump file is present
 * Open terminal
 * sudo su postgres
