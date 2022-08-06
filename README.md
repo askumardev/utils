@@ -73,6 +73,7 @@ test:
 
 ## PG db restoration commands
 * sudo service postgresql stop
+* sudo service postgresql start
 * Go to folder where dump file is present
 * Open terminal
 * sudo su postgres
