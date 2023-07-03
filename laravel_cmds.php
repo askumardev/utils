@@ -1,4 +1,6 @@
-php artisan tinker
+php artisan
+
+php artisan tinker(db console)
 
 > $user = new User;
 [!] Aliasing 'User' to 'App\Models\User' for this Tinker session.
@@ -27,3 +29,21 @@ App\Models\User {#6222
     email: "ask@ask.com",
     id: 2,
   }
+  
+ User::find(1), 
+ $users = User::all(), $users->pluck('name')
+ 
+ User::findOrFail(200)
+ 
+ 
+ php artisan help make:migration
+ 
+ php artisan make:migration create_posts_table;
+ 
+ php artisan migrate
+ 
+ php artisan make:model Post;
+ App\Models\Post::all();
+ 
+ App\Models\Post::count();
+ 
