@@ -1,10 +1,11 @@
  1777  sudo apt-get update
- 1778  clear
+
  1779  sudo systemctl status apache2
  1780  sudo apt install apache2
  1781  sudo systemctl status apache2
+ 
  1782  sudo apt install php7.4-common php7.4-cli php7.4-mysql php7.4-mbstring php7.4-xml -y
- 1783  sudo apt install php8
+
  1784  sudo apt install php8.0
  1785  sudo apt install software-properties-common
  1786  sudo add-apt-repository ppa:ondrej/php
@@ -20,13 +21,13 @@
  1796  composer create-project laravel/laravel lara_app
  1797  sudo chown -R ubuntu:ubuntu /var/www/html
  1798  sudo chmod -R 755 /var/www/html
- 1799  composer create-project laravel/laravel lara_app
+
  1800  sudo service apache2 restart
- 1801  composer create-project laravel/laravel lara_app
+
  1802  sudo apt install php8.1
  1803  composer create-project laravel/laravel lara_app
  1804  cd ..
- 1805  composer create-project laravel/laravel first-laravel9
+
  1806  php --ini
  1807  composer --ignore-platform-req=ext-xml
  1808  composer create-project laravel/laravel first-laravel9
