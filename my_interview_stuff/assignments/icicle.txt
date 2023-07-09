@@ -1,0 +1,39 @@
+https://www.bigocheatsheet.com/
+
+Model
+User
+- Name
+- Mobile
+Degree
+- Name
+Subject
+- Name
+DegreeSubject
+- Marks
+- user_id
+- degree_id
+- subject_id
+UserDegree
+- user_id
+- degree_id
+- passing_year
+
+User has_many degrees and degrees has_many users via UserDegree - Many to Many association
+
+Degree has_many subjects and subject has_many degrees via DegreeSubject - Many to Many association
+
+Create a single HTML Page using Bootstrap which takes 3 Sections
+Section 1
+User Details Like enter user name and Mobile
+
+Section 2 (can add multiple degrees inside user)
+Enter User Degree like 10th, 12th, Graduation etc...
+
+Section 3 (can add multiple subjects inside each degree)
+Enter Subjects for each Degree and UserThere will be single SAVE button on click of we will save
+1. User
+2. Degree
+3. Subjects
+4. UserDegree
+5. DegreeSubject
+Create Save & Edit feature for this.

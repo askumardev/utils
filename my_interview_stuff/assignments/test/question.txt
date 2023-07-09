@@ -1,0 +1,85 @@
+The route admin/students.csv?export_type=students in the Dashboard application returns a CSV 
+file with data from the student model. The export used to work with 10,000 or less records in the 
+student model. But now that there are over 26,000 records, the export crashes, 
+consumes too much CPU and doesn't finish.
+See https://github.com/lumerit/dashboard-example/blob/master/app/exports/student_export.rb for a starting point.
+
+How would suggest refactoring the code so that the export finishes?
+
+
+=========================================================
+
+
+User
+
+Student 
+
+CoachAssignment
+
+StudentStatus
+
+Status
+
+SubStatus
+
+Enrollment
+
+Lumerit::Program
+
+Employer
+
+StudentEmployer
+===================================================================
+Post.joins(:category, :comments)
+Case1
+
+@csv = Student.joins(:employer).select(:student_id,:first_name,:employer_name).find_in_batches(batch_size :5000)
+
+=======================================================================
+Case 2
+
+b=5000
+
+1
+12
+
+
+students_query.each_slice(4) do | batch |
+    batch.each do | element |
+        @student_fields = add_student_information(student.first, student_degrees(student_id))
+      	add_student_employer(student_id)
+      	set_program_fields(student_id)
+      	csv << @student_fields
+    end
+end
+
+
+=======================================================
+divide the 26000 records into batches
+take each batch and insert into csv by one batch at a time
+=============================================
+
+Straming or piping makes faster.
+==================================
+batch by batch from database
+Database is to be index
+
+
+
+
+
+
+[1, 2, 3, 4]
+[5, 6, 7, 8]
+[9, 10, 11, 12]
+
+===================================================================
+
+Student.find_in_batches(start: 1, batch_size: 5000) do |group|
+  		@student_fields = add_student_information(student.first, student_degrees(student_id))
+      	add_student_employer(student_id)
+      	set_program_fields(student_id)
+
+      	csv << @student_fields
+end
+start+=5000
