@@ -1,4 +1,4 @@
-=======================Section-1===================================
+=======================Section-1===================================#
 1)diff btn has many through and habtm? also which is better?
 2)what are validations in rails? at what moment of objects life cycle validations are checked?
 3)what do u mean by polymorphic association?when can one use this association?
