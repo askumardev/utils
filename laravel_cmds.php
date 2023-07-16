@@ -1,3 +1,5 @@
+php artisan serve(to run the server)
+
 php artisan
 
 php artisan tinker(db console)
