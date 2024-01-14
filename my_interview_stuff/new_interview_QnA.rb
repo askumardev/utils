@@ -137,3 +137,4 @@
 8)content_for in rails
 9)what do u mean by sanitizing params in rails
 10)render vs redirect in rails
+11)What happens if u provide an invalid type value attribute for an STI record
