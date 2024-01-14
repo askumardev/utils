@@ -127,3 +127,13 @@
 9)let vs let! in RSpec
 10)What are callbacks. Explain for both model and controller.
 =============================Section-12======================================
+1)difference between uniq and distinct in ror
+2)how will u get objects with atleast one child
+3)in what cases change method is not reverible in rails migrations
+4)what happens if u dont provide the column type in the remove_column migration
+5)what happens if u rollback a migration within the change method
+6)preload vs includes
+7)how many ways to eagerloading the associations
+8)content_for in rails
+9)what do u mean by sanitizing params in rails
+10)render vs redirect in rails
