@@ -33,3 +33,5 @@ Step 4: Now go to Preferences > Package Settings > Terminus > Key Bindings
     }
   }
 ]
+Step 5:
+Click Alt + 1 to open the amd window in the sublime text
