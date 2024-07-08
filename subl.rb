@@ -15,21 +15,21 @@ Step 3: Now go to Preferences >Package Settings > Terminus > Command Palette
 
 [
    {
-        "caption": "Terminal (panel)",
-        "command": "terminus_open",
-        "args"   : {
-           "cmd": "bash",
-           "cwd": "${file_path:${folder}}",
-           "title": "Command Prompt",
-           "panel_name": "Terminus"
-        }
+      "caption": "Terminal (panel)",
+      "command": "terminus_open",
+      "args"   : {
+       "cmd": "bash",
+       "cwd": "${file_path:${folder}}",
+       "title": "Command Prompt",
+       "panel_name": "Terminus"
+      }
    },
 ]  
 Step 4: Now go to Preferences > Package Settings > Terminus > Key Bindings
 [
-    {
-        "keys": ["alt+1"], "command": "toggle_terminus_panel", "args": {
-            "cwd": "${file_path:${folder}}"
-        }
+  {
+    "keys": ["alt+1"], "command": "toggle_terminus_panel", "args": {
+      "cwd": "${file_path:${folder}}"
     }
+  }
 ]
