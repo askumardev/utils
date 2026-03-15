@@ -4,6 +4,7 @@
 
 | Section | Description |
 |-------|-------------|
+| [Installation Commands](docs/installation.md) | List of commands for installation |
 | [Core Commands](docs/commands.md) | List of commands |
 | [Rails Prompts](docs/rails-prompts.md) | Prompts useful for Rails development |
 | [RSpec Prompts](docs/rspec-prompts.md) | Prompts for writing tests |
