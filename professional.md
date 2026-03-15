@@ -269,4 +269,5 @@ git clone https://github.com/example/project.git
 
 
 
-[1. Headings](#1-headings)
+
+[⬆ Back to Top](#markdown-cheat-sheet)
