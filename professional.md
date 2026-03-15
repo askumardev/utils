@@ -75,7 +75,7 @@ This file demonstrates various Markdown formats supported by GitHub.
 
 # 7. Images
 
-![Sample Image](https://via.placeholder.com/200)
+![Sample Image](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtzBRjLzFg_WYO2DA-J2KWCt2U54-1wXlptQ&s)
 
 ---
 
