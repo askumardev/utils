@@ -88,19 +88,6 @@ This file demonstrates various Markdown formats supported by GitHub.
 
 ---
 
-# 9. Code Blocks
-
-## Ruby Example
-
-```ruby
-class OrderService
-  def process(order)
-    puts "Processing order #{order.id}"
-  end
-end
-
-
-
 10. Horizontal Line
 ---
 11. Collapsible Section (GitHub Feature)
@@ -117,6 +104,7 @@ Code
 Text
 
 </details>
+---
 12. Emoji
 
 :rocket: :sparkles: :warning: :bug:
@@ -125,21 +113,23 @@ Text
 
 ⚠️ Important: Always review pull requests carefully.
 
+
+---
 14. Keyboard Keys
 
 Press Ctrl + Shift + P in VS Code.
-
+---
 15. Inline HTML (Supported in GitHub)
 <div style="color:blue"> This text is styled using HTML. </div>
+---
 16. Anchors (Internal Links)
 
-Jump to:
+# 📚 Table of Contents
 
-Headings
+- [Core Commands](#core-commands)
+- [Headings](# 1. Headings)
+- [Tables](# 8. Tables)
 
-Tables
-
-Code Blocks
 
 17. Diagram Style (Simple)
 User
@@ -153,6 +143,21 @@ Service
   ▼
 Database
 18. Badges
+
+# 9. Code Blocks
+
+## Ruby Example
+
+```ruby
+class OrderService
+  def process(order)
+    puts "Processing order #{order.id}"
+  end
+end
+
+
+
+
 
 
 
