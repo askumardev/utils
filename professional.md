@@ -154,6 +154,78 @@ Database
 
 18. Badges
 
+---
+19. Boxes
+1. Note Box
+> [!NOTE]
+> This is a note explaining something important.
+
+---
+2. Tip Box
+> [!TIP]
+> Use `bundle exec` when running Ruby commands.
+---
+
+3. Important Box
+> [!IMPORTANT]
+> Always run database migrations after pulling new code.
+
+---
+4. Warning Box
+> [!WARNING]
+> This command will reset the database and delete all data.
+---
+
+5. Caution Box
+> [!CAUTION]
+> Do not commit secrets or API keys to the repository.
+---
+6. Alert With Multiple Lines
+> [!NOTE]
+> Make sure you install dependencies first.
+>
+> Run:
+>
+> ```bash
+> bundle install
+> ```
+---
+
+7. Alert With List
+> [!TIP]
+> Useful commands:
+> - `rails server`
+> - `rails console`
+> - `rails db:migrate`
+---
+
+8. Example Used in Documentation
+## Installation
+
+> [!IMPORTANT]
+> Ensure Ruby 3+ is installed before starting.
+
+Clone repository:
+
+```bash
+git clone https://github.com/example/project.git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 9. Code Blocks
 
 ## Ruby Example
