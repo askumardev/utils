@@ -104,11 +104,14 @@ Code
 Text
 
 </details>
+
+
 ---
+
 12. Emoji
 
 :rocket: :sparkles: :warning: :bug:
-
+---
 13. Highlighted Notes
 
 ⚠️ Important: Always review pull requests carefully.
@@ -118,7 +121,11 @@ Text
 14. Keyboard Keys
 
 Press Ctrl + Shift + P in VS Code.
+
 ---
+
+
+
 15. Inline HTML (Supported in GitHub)
 <div style="color:blue"> This text is styled using HTML. </div>
 ---
@@ -130,7 +137,7 @@ Press Ctrl + Shift + P in VS Code.
 - [Headings](# 1. Headings)
 - [Tables](# 8. Tables)
 
-
+---
 17. Diagram Style (Simple)
 User
   │
@@ -142,6 +149,9 @@ Service
   │
   ▼
 Database
+
+---
+
 18. Badges
 
 # 9. Code Blocks
