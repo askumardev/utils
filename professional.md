@@ -264,7 +264,7 @@ Clone repository:
 
 ```bash
 git clone https://github.com/example/project.git
-
+```
 ---
 
 # Key Improvements I Made
