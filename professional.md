@@ -167,30 +167,3 @@ end
 
 
 
-
-
-
-
-
-# 📚 Table of Contents
-
-- [Core Commands](#core-commands)
-- [Context Commands](#context-commands)
-- [Rails Prompts](#rails-prompts)
-- [RSpec Prompts](#rspec-prompts)
-- [Debugging Prompts](#debugging-prompts)
-
----
-
-# Core Commands
-
-| Command   | Purpose                |
-| --------- | ---------------------- |
-| /explain  | Explain selected code  |
-| /fix      | Fix bugs               |
-| /tests    | Generate tests         |
-| /doc      | Generate documentation |
-| /optimize | Improve performance    |
-| /generate | Generate code          |
-
-Example:
