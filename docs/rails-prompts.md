@@ -66,4 +66,8 @@ test:
 
 ## Example
 
-Prompt:
+## 📚 Navigation
+
+| Section | Description |
+|-------|-------------|
+| [Action Cable](docs/actioncable.md) | List of Actioncable commands |
