@@ -214,32 +214,3 @@ Clone repository:
 ```bash
 git clone https://github.com/example/project.git
 
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 9. Code Blocks
-
-## Ruby Example
-
-```ruby
-class OrderService
-  def process(order)
-    puts "Processing order #{order.id}"
-  end
-end
-
-
-
