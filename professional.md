@@ -99,9 +99,10 @@ class OrderService
   end
 end
 
----
+
 
 10. Horizontal Line
+---
 11. Collapsible Section (GitHub Feature)
 <details> <summary>Click to expand</summary>
 
