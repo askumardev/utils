@@ -38,3 +38,9 @@ while [ "$ITER_DATE" -le "$CURRENT_DATE" ]; do
 done
 
 echo "Timeline complete. Push to see the masterpiece."
+
+# in terminal on the proj main dir
+
+#~/code/utils$ sudo chmod +x fill.sh
+
+# ~/code/utils$ ./fill.sh
