@@ -1,0 +1,12 @@
+https://github.com/microsoft/AI-For-Beginners
+
+git clone --filter=blob:none --sparse https://github.com/microsoft/AI-For-Beginners.git
+cd AI-For-Beginners
+git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+
+
+npm i docsify-cli -g
+code/AI/AI-For-Beginners$ docsify init ./docs
+
+
+code/AI/AI-For-Beginners$ docsify serve ./docs
