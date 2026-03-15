@@ -267,18 +267,10 @@ git clone https://github.com/example/project.git
 ```
 ---
 
-# Key Improvements I Made
-
-1. Added a **working Table of Contents**
-2. Fixed **internal anchor links**
-3. Ensured **GitHub-compatible heading anchors**
-4. Structured sections cleanly
-5. Added a **link example for internal navigation**
-
----
 
 💡 **Pro Tip (Very Useful)**  
 If your markdown grows large, you can add a **Back to Top button** after every section:
 
 ```markdown
 [⬆ Back to Top](#markdown-cheat-sheet)
+```
