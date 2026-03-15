@@ -101,6 +101,61 @@ end
 
 ---
 
+10. Horizontal Line
+11. Collapsible Section (GitHub Feature)
+<details> <summary>Click to expand</summary>
+
+Hidden content inside collapsible section.
+
+You can add:
+
+Lists
+
+Code
+
+Text
+
+</details>
+12. Emoji
+
+:rocket: :sparkles: :warning: :bug:
+
+13. Highlighted Notes
+
+⚠️ Important: Always review pull requests carefully.
+
+14. Keyboard Keys
+
+Press Ctrl + Shift + P in VS Code.
+
+15. Inline HTML (Supported in GitHub)
+<div style="color:blue"> This text is styled using HTML. </div>
+16. Anchors (Internal Links)
+
+Jump to:
+
+Headings
+
+Tables
+
+Code Blocks
+
+17. Diagram Style (Simple)
+User
+  │
+  ▼
+Controller
+  │
+  ▼
+Service
+  │
+  ▼
+Database
+18. Badges
+
+
+
+
 # 📚 Table of Contents
 
 - [Core Commands](#core-commands)
