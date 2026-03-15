@@ -4,6 +4,29 @@ This file demonstrates various Markdown formats supported by GitHub.
 
 ---
 
+# 📚 Table of Contents
+
+- [1. Headings](#1-headings)
+- [2. Text Formatting](#2-text-formatting)
+- [3. Blockquotes](#3-blockquotes)
+- [4. Lists](#4-lists)
+- [5. Task Lists](#5-task-lists)
+- [6. Links](#6-links)
+- [7. Images](#7-images)
+- [8. Tables](#8-tables)
+- [9. Horizontal Line](#9-horizontal-line)
+- [10. Collapsible Section](#10-collapsible-section-github-feature)
+- [11. Emoji](#11-emoji)
+- [12. Highlighted Notes](#12-highlighted-notes)
+- [13. Keyboard Keys](#13-keyboard-keys)
+- [14. Inline HTML](#14-inline-html-supported-in-github)
+- [15. Anchors](#15-anchors-internal-links)
+- [16. Diagram Style](#16-diagram-style-simple)
+- [17. Badges](#17-badges)
+- [18. Boxes / Alerts](#18-boxes)
+
+---
+
 # 1. Headings
 
 # Heading 1
@@ -88,118 +111,127 @@ This file demonstrates various Markdown formats supported by GitHub.
 
 ---
 
-10. Horizontal Line
+# 9. Horizontal Line
+
 ---
-11. Collapsible Section (GitHub Feature)
-<details> <summary>Click to expand</summary>
+
+# 10. Collapsible Section (GitHub Feature)
+
+<details>
+<summary>Click to expand</summary>
 
 Hidden content inside collapsible section.
 
 You can add:
 
-Lists
-
-Code
-
-Text
+- Lists
+- Code
+- Text
 
 </details>
 
-
 ---
 
-12. Emoji
+# 11. Emoji
 
 :rocket: :sparkles: :warning: :bug:
----
-13. Highlighted Notes
-
-⚠️ Important: Always review pull requests carefully.
-
-
----
-14. Keyboard Keys
-
-Press Ctrl + Shift + P in VS Code.
 
 ---
 
+# 12. Highlighted Notes
 
+⚠️ **Important:** Always review pull requests carefully.
 
-15. Inline HTML (Supported in GitHub)
-<div style="color:blue"> This text is styled using HTML. </div>
+---
+
+# 13. Keyboard Keys
+
+Press `Ctrl + Shift + P` in VS Code.
 
 ---
 
+# 14. Inline HTML (Supported in GitHub)
 
-
-16. Anchors (Internal Links)
-
-# 📚 Table of Contents
-
-- [Core Commands](#core-commands)
-- [Headings](# 1. Headings)
-- [Tables](# 8. Tables)
+<div style="color:blue">
+This text is styled using HTML.
+</div>
 
 ---
-17. Diagram Style (Simple)
+
+# 15. Anchors (Internal Links)
+
+Example internal link:
+
+[Go to Tables Section](#8-tables)
+
+---
+
+# 16. Diagram Style (Simple)
+
+
 User
-  │
-  ▼
+│
+▼
 Controller
-  │
-  ▼
+│
+▼
 Service
-  │
-  ▼
+│
+▼
 Database
 
+
 ---
 
-18. Badges
+# 17. Badges
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
 ![Version](https://img.shields.io/badge/version-1.0-green)
-
 ![Ruby](https://img.shields.io/badge/ruby-3.2-red)
-
 ![Rails](https://img.shields.io/badge/rails-7-red)
-
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 
-![Stars](https://img.shields.io/github/stars/username/repo)
-
-![Forks](https://img.shields.io/github/forks/username/repo)
-
-![Issues](https://img.shields.io/github/issues/username/repo)
 ---
-## 19. Boxes
-1. Note Box
+
+# 18. Boxes
+
+## Note Box
+
 > [!NOTE]
 > This is a note explaining something important.
 
 ---
-2. Tip Box
+
+## Tip Box
+
 > [!TIP]
 > Use `bundle exec` when running Ruby commands.
+
 ---
 
-3. Important Box
+## Important Box
+
 > [!IMPORTANT]
 > Always run database migrations after pulling new code.
 
 ---
-4. Warning Box
+
+## Warning Box
+
 > [!WARNING]
 > This command will reset the database and delete all data.
+
 ---
 
-5. Caution Box
+## Caution Box
+
 > [!CAUTION]
 > Do not commit secrets or API keys to the repository.
+
 ---
-6. Alert With Multiple Lines
+
+## Alert With Multiple Lines
+
 > [!NOTE]
 > Make sure you install dependencies first.
 >
@@ -208,17 +240,21 @@ Database
 > ```bash
 > bundle install
 > ```
+
 ---
 
-7. Alert With List
+## Alert With List
+
 > [!TIP]
 > Useful commands:
 > - `rails server`
 > - `rails console`
 > - `rails db:migrate`
+
 ---
 
-8. Example Used in Documentation
+## Example Used in Documentation
+
 ## Installation
 
 > [!IMPORTANT]
@@ -229,3 +265,20 @@ Clone repository:
 ```bash
 git clone https://github.com/example/project.git
 
+---
+
+# Key Improvements I Made
+
+1. Added a **working Table of Contents**
+2. Fixed **internal anchor links**
+3. Ensured **GitHub-compatible heading anchors**
+4. Structured sections cleanly
+5. Added a **link example for internal navigation**
+
+---
+
+💡 **Pro Tip (Very Useful)**  
+If your markdown grows large, you can add a **Back to Top button** after every section:
+
+```markdown
+[⬆ Back to Top](#markdown-cheat-sheet)
