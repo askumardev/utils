@@ -1,0 +1,133 @@
+GitHub Copilot – Effective Prompt & Command Notes
+1. Core Slash Commands (Most Used)
+Command	Purpose	Example
++-----------+-------------------------------------+-----------------------------------------------------------+
+| Command   | Purpose                             | Example                                                   |
++-----------+-------------------------------------+-----------------------------------------------------------+
+| /explain  | Explains selected code              | /explain this ActiveRecord query and mention performance  |
+| /fix      | Finds bugs and suggests fixes       | /fix this Ruby code that raises undefined method error    |
+| /tests    | Generates unit tests                | /tests generate RSpec tests for this Rails controller     |
+| /doc      | Generates documentation/comments    | /doc add documentation for this GraphQL mutation          |
+| /optimize | Improves performance or readability | /optimize this N+1 ActiveRecord query                     |
+| /generate | Creates new code from description   | /generate a Rails service object for Stripe payments      |
+| /review   | Performs code review                | /review this Rails controller for improvements             |
+| /refactor | Improves code structure             | /refactor this Rails controller using service objects     |
+| /help     | Lists available commands            | /help                                                     |
+| /new      | Starts a new chat session           | /new                                                      |
+| /clear    | Clears the conversation             | /clear                                                    |
++-----------+-------------------------------------+-----------------------------------------------------------+
+
+2. Context Commands (Very Powerful)
+
+These allow Copilot to understand project context.
+
+Workspace
+@workspace explain the authentication flow in this project
+@workspace find usages of OrderService
+
+Specific File
+Explain logic in #file:order_service.rb
+
+Selected Code
+Refactor #selection into a Rails service object
+
+Terminal Errors
+@terminal explain this error
+
+
+3. Best Prompts for Rails Development
+Generate Model
+Generate a Rails model for Restaurant with validations, associations, and indexes.
+Service Object
+Create a Rails service object for processing orders with proper error handling.
+API Controller
+Generate a RESTful Rails API controller for managing orders with pagination.
+Background Job
+Create a Sidekiq job to send order confirmation emails.
+GraphQL
+Generate GraphQL schema, query, and mutation for a restaurant ordering system.
+Database Optimization
+Analyze this ActiveRecord query and suggest indexes.
+
+
+4. RSpec Test Prompts
+Model Tests
+Generate RSpec tests for this Rails model including validations and associations.
+Controller Tests
+Generate RSpec tests for this Rails controller including success and failure cases.
+Service Object Tests
+Generate RSpec tests for this Rails service object including edge cases.
+Background Job Tests
+Generate RSpec tests for this Sidekiq job.
+External API Mocking
+Generate RSpec tests mocking payment API using WebMock.
+
+
+5. Production Debugging Prompts
+Stack Trace
+Analyze this Rails stack trace and identify the root cause.
+Slow Query
+Identify why this ActiveRecord query is slow and suggest optimizations.
+Background Job Failure
+Analyze why this Sidekiq job is failing.
+API Timeout
+Investigate why this Rails API endpoint is timing out.
+Race Conditions
+Check if this Rails code has race conditions.
+
+
+6. System Design / Architecture Prompts
+Design a scalable Rails architecture for handling 1M users using Redis and Sidekiq.
+Suggest caching strategies for this Rails application.
+Explain how to scale this Rails API for high traffic.
+
+
+7. Multi-Step Prompt (Best Practice)
+
+Use structured prompts:
+
+Analyze this Rails controller and:
+1. Explain the code
+2. Identify bugs
+3. Suggest performance improvements
+4. Generate RSpec tests
+
+This gives much higher quality responses.
+
+8. Best Prompt Structure (Important)
+
+High-quality prompts contain:
+
+Context
+
+Constraints
+
+Expected Output
+
+Example:
+
+Generate a Rails service object to process Stripe payments with proper error handling and RSpec tests.
+
+
+
+9. Typical Rails Copilot Workflow
+
+1️⃣ Understand code
+
+/explain
+
+2️⃣ Fix bugs
+
+/fix
+
+3️⃣ Improve performance
+
+/optimize
+
+4️⃣ Generate tests
+
+/tests
+
+
+10. Powerful Senior-Engineer Prompt
+Act as a senior Ruby on Rails engineer and review this code for performance, security, and maintainability.
