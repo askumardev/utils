@@ -16,19 +16,24 @@ alias cl='clear'\
 alias ys='yarn start'\
 alias gg='git gui'
 
-## Commands
 
-| Command | Purpose | Example |
-|-------|--------|--------|
-| /explain | Explain selected code | Explain this function |
-| /fix | Fix bugs | Fix null pointer issue |
-| /tests | Generate unit tests | Create RSpec tests |
-| /optimize | Improve performance | Optimize this loop |
-| /docs | Generate documentation | Add comments |
-| /refactor | Improve code structure | Refactor controller |
-| /simplify | Simplify code | Simplify this logic |
 
----
+## About
+
+This repository contains notes and prompts to use GitHub Copilot effectively.
+
+
+# utils here
+## ntfs commands
+* `sudo ntfsfix /dev/sda6`
+* `sudo ntfsfix /dev/sda5`
+
+
+
+## For terminal in sublime
+* https://www.geeksforgeeks.org/how-to-use-terminal-in-sublime-text-editor/
+* Alt+1
+
 
 ## Example
 
