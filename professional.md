@@ -157,16 +157,21 @@ Database
 ---
 
 18. Badges
+
 ![License](https://img.shields.io/badge/license-MIT-blue)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-![License](https://img.shields.io/badge/license-MIT-blue)
+
 ![Version](https://img.shields.io/badge/version-1.0-green)
+
 ![Ruby](https://img.shields.io/badge/ruby-3.2-red)
+
 ![Rails](https://img.shields.io/badge/rails-7-red)
+
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 
 ![Stars](https://img.shields.io/github/stars/username/repo)
+
 ![Forks](https://img.shields.io/github/forks/username/repo)
+
 ![Issues](https://img.shields.io/github/issues/username/repo)
 ---
 ## 19. Boxes
