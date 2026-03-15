@@ -268,8 +268,6 @@ git clone https://github.com/example/project.git
 ---
 
 
-💡 **Pro Tip (Very Useful)**  
-If your markdown grows large, you can add a **Back to Top button** after every section:
 
 ```markdown
 [⬆ Back to Top](#markdown-cheat-sheet)
