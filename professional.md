@@ -128,7 +128,11 @@ Press Ctrl + Shift + P in VS Code.
 
 15. Inline HTML (Supported in GitHub)
 <div style="color:blue"> This text is styled using HTML. </div>
+
 ---
+
+
+
 16. Anchors (Internal Links)
 
 # 📚 Table of Contents
@@ -211,7 +215,7 @@ Clone repository:
 git clone https://github.com/example/project.git
 
 
-
+---
 
 
 
