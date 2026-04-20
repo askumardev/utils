@@ -1,141 +1,91 @@
 1. Ruby on Rails – Practical Coding Prompts
-
 You often use ChatGPT as a Rails pair programmer.
 
 “Write Rails 7 code for ___ with best practices”
-
 “Explain this Rails behavior with real-world examples”
-
 “Refactor this Rails code to be cleaner and more idiomatic”
-
 “What are all possible edge cases for this controller action?”
-
 “Why is this Rails error occurring and how do I fix it?”
-
 “Generate a Rails model/controller/service for ___”
-
 “Show multiple ways to implement ___ in Rails and compare them”
-
+---------------------------------------------------------------------
 2. JavaScript / Stimulus / Hotwire Prompts
-
 You use ChatGPT to bridge backend + frontend.
 
 “Implement this feature using Stimulus JS in Rails 7”
-
 “Fix this Stimulus error and explain why it happens”
-
 “Convert this vanilla JS into a Stimulus controller”
-
 “How does Turbo behave in this scenario?”
-
 “Best way to do AJAX in Rails without jQuery”
-
+---------------------------------------------------------------------
 3. Debugging & Error Analysis Prompts
-
 You rely on ChatGPT for root-cause analysis, not just fixes.
 
 “Analyze this error log and explain the failure path”
-
 “Why does this code work in development but fail in production?”
-
 “What conditions would cause this else block to run?”
-
 “Explain this stack trace line by line”
-
 “What’s the hidden bug or risk in this code?”
-
+---------------------------------------------------------------------
 4. Architecture & Best Practices
-
 You think in systems, not snippets.
 
 “What’s the best design pattern for this use case in Rails?”
-
 “Should this logic live in a model, service, or concern?”
-
 “Compare two architectural approaches and recommend one”
-
 “How would this scale with large data or high traffic?”
-
 “What would a senior engineer do differently here?”
-
+---------------------------------------------------------------------
 5. API, Data, and Integration Prompts
-
 You often work with APIs and data flow.
 
 “Design a REST API for ___ with proper validations”
-
 “Handle CSRF, auth, and error cases for this API”
-
 “How should I structure request and response payloads?”
-
 “Generate API documentation for this endpoint”
-
 “Debug this 422 / CSRF / params issue”
-
+---------------------------------------------------------------------
 6. Learning & Skill-Growth Prompts
 
 You use ChatGPT to level up, not just finish tasks.
 
 “Give me a roadmap to learn ___ as a senior developer”
-
 “Explain this concept assuming I already know the basics”
-
 “What are common mistakes engineers make with ___?”
-
 “Teach me this through a real-world Rails example”
-
 “How is this done in modern production apps?”
-
+---------------------------------------------------------------------
 7. Optimization & Clean Code Prompts
-
 You care about clarity and maintainability.
 
 “Simplify this logic without changing behavior”
-
 “Improve readability and naming”
-
 “Remove unnecessary conditionals”
-
 “Make this code more testable”
-
 “What conventions should I follow here?”
-
+---------------------------------------------------------------------
 8. Meta & Prompt-Engineering Prompts
-
 You also optimize how you use ChatGPT.
 
 “Generate better prompts for this task”
-
 “Turn this vague requirement into a clear prompt”
-
 “Summarize my usage patterns”
-
 “Create reusable prompt templates”
-
 “Abstract this into a framework”
-
+---------------------------------------------------------------------
 9. Quick Validation Prompts
-
 You use ChatGPT for fast confirmation.
 
 “Is this approach correct?”
-
 “Is there any hidden downside?”
-
 “Is this idiomatic Rails?”
-
 “Would you approve this in a code review?”
 
 10. Output-Control Prompts
-
 You like precise, no-fluff answers.
 
 “Give only code, no explanation”
-
 “Explain briefly”
-
 “List all edge cases”
-
 “Provide examples”
-
 “Show before and after”

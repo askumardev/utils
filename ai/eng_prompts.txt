@@ -1,0 +1,69 @@
+✅ 1. Simple Grammar Correction
+Use this when you just want a corrected sentence.
+
+Prompt:
+Correct the following sentence:
+"He go to office yesterday."
+---------------------------------------------------------------------
+✅ 2. Correction with Explanation
+Useful when you want to learn why it’s wrong.
+
+Prompt:
+Correct the sentence and explain the mistakes:
+"He go to office yesterday."
+---------------------------------------------------------------------
+✅ 3. Improve Sentence (Professional Tone)
+Great for resumes, emails, LinkedIn, etc.
+
+Prompt:
+Improve this sentence to sound more professional:
+"I worked on many projects and did good work."
+---------------------------------------------------------------------
+✅ 4. Multiple Variations
+Helpful when you want options.
+
+Prompt:
+Rewrite this sentence in 3 different ways:
+"I handled customer issues quickly."
+---------------------------------------------------------------------
+✅ 5. Formal vs Informal Tone
+When tone matters.
+
+Prompt:
+Rewrite this sentence in a formal tone:
+"Can you send me the file asap?"
+---------------------------------------------------------------------
+✅ 6. Resume-Specific Correction
+Very useful based on your recent work.
+
+Prompt:
+Correct and enhance this resume bullet point with better grammar and impact:
+"Used Git extensively got branching, merging, and release management."
+---------------------------------------------------------------------
+✅ 7. Add Metrics / Impact
+Perfect for job experience lines.
+
+Prompt:
+Improve this sentence by adding measurable impact:
+"Improved application performance."
+---------------------------------------------------------------------
+✅ 8. Check for Grammar + Clarity + Conciseness
+More complete refinement.
+
+Prompt:
+Check and correct the sentence for grammar, clarity, and conciseness:
+"Handled, analysed and provided support for day-to-day issues in development, staging and production environments."
+---------------------------------------------------------------------
+✅ 9. Fix Only Grammar (No Rewrite)
+If you don’t want your sentence changed too much.
+
+Prompt:
+Fix only grammar mistakes without changing the meaning:
+"She don't like coffee."
+---------------------------------------------------------------------
+✅ 10. Advanced (Best Practice Prompt)
+This gives the most useful output.
+
+Prompt:
+Correct the sentence, improve clarity, and make it professional. Also explain the changes briefly:
+"Created responsive landing pages, boosting conversion rates by 15% while supporting marketing campaigns."
