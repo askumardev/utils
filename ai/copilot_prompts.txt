@@ -18,7 +18,6 @@ Command	Purpose	Example
 +-----------+-------------------------------------+-----------------------------------------------------------+
 
 2. Context Commands (Very Powerful)
-
 These allow Copilot to understand project context.
 
 Workspace
@@ -34,7 +33,7 @@ Refactor #selection into a Rails service object
 Terminal Errors
 @terminal explain this error
 
-
+--------------------------------------------------------------------------------------
 3. Best Prompts for Rails Development
 Generate Model
 Generate a Rails model for Restaurant with validations, associations, and indexes.
@@ -49,7 +48,7 @@ Generate GraphQL schema, query, and mutation for a restaurant ordering system.
 Database Optimization
 Analyze this ActiveRecord query and suggest indexes.
 
-
+--------------------------------------------------------------------------------------
 4. RSpec Test Prompts
 Model Tests
 Generate RSpec tests for this Rails model including validations and associations.
@@ -62,7 +61,7 @@ Generate RSpec tests for this Sidekiq job.
 External API Mocking
 Generate RSpec tests mocking payment API using WebMock.
 
-
+--------------------------------------------------------------------------------------
 5. Production Debugging Prompts
 Stack Trace
 Analyze this Rails stack trace and identify the root cause.
@@ -75,15 +74,14 @@ Investigate why this Rails API endpoint is timing out.
 Race Conditions
 Check if this Rails code has race conditions.
 
-
+--------------------------------------------------------------------------------------
 6. System Design / Architecture Prompts
 Design a scalable Rails architecture for handling 1M users using Redis and Sidekiq.
 Suggest caching strategies for this Rails application.
 Explain how to scale this Rails API for high traffic.
 
-
+--------------------------------------------------------------------------------------
 7. Multi-Step Prompt (Best Practice)
-
 Use structured prompts:
 
 Analyze this Rails controller and:
@@ -91,43 +89,32 @@ Analyze this Rails controller and:
 2. Identify bugs
 3. Suggest performance improvements
 4. Generate RSpec tests
-
 This gives much higher quality responses.
-
+--------------------------------------------------------------------------------------
 8. Best Prompt Structure (Important)
 
 High-quality prompts contain:
-
 Context
-
 Constraints
-
 Expected Output
-
 Example:
-
 Generate a Rails service object to process Stripe payments with proper error handling and RSpec tests.
 
-
-
+--------------------------------------------------------------------------------------
 9. Typical Rails Copilot Workflow
 
 1️⃣ Understand code
-
 /explain
 
 2️⃣ Fix bugs
-
 /fix
 
 3️⃣ Improve performance
-
 /optimize
 
 4️⃣ Generate tests
-
 /tests
 
-
+--------------------------------------------------------------------------------------
 10. Powerful Senior-Engineer Prompt
 Act as a senior Ruby on Rails engineer and review this code for performance, security, and maintainability.

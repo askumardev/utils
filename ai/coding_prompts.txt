@@ -80,7 +80,7 @@ You use ChatGPT for fast confirmation.
 “Is there any hidden downside?”
 “Is this idiomatic Rails?”
 “Would you approve this in a code review?”
-
+---------------------------------------------------------------------
 10. Output-Control Prompts
 You like precise, no-fluff answers.
 
