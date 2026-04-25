@@ -5,6 +5,19 @@ SELECT FirstName, LastName, Country
 FROM customers
 WHERE Country = 'USA';
 ----------------------------------------------------
+-- 1. List all customers
+SELECT * FROM customers;
+
+-- 2. Customers from India
+SELECT FirstName, LastName
+FROM customers
+WHERE Country = 'India';
+
+-- 3. Tracks with price > 1
+SELECT Name, UnitPrice
+FROM tracks
+WHERE UnitPrice > 1;
+----------------------------------------------------
 List all tracks with their unit price:
 SELECT Name, UnitPrice
 FROM tracks;
@@ -20,6 +33,38 @@ SELECT c.CustomerId, c.FirstName, c.LastName, SUM(i.Total) AS TotalSpent
 FROM customers c
 JOIN invoices i ON c.CustomerId = i.CustomerId
 GROUP BY c.CustomerId;
+
+-- 6. Customers with their invoices
+SELECT c.FirstName, i.InvoiceId, i.Total
+FROM customers c
+JOIN invoices i ON c.CustomerId = i.CustomerId;
+
+-- 7. Track name with genre
+SELECT t.Name, g.Name AS Genre
+FROM tracks t
+JOIN genres g ON t.GenreId = g.GenreId;
+
+-- 10. Total spent per customer
+SELECT CustomerId, SUM(Total) AS total_spent
+FROM invoices
+GROUP BY CustomerId;
+
+-- 11. Count tracks per genre
+SELECT g.Name, COUNT(*) AS track_count
+FROM tracks t
+JOIN genres g ON t.GenreId = g.GenreId
+GROUP BY g.GenreId;
+
+-- 14. Customers who spent more than $50
+SELECT CustomerId, SUM(Total) AS total
+FROM invoices
+GROUP BY CustomerId
+HAVING total > 50;
+
+-- 15. Tracks above average price
+SELECT Name, UnitPrice
+FROM tracks
+WHERE UnitPrice > (SELECT AVG(UnitPrice) FROM tracks);
 
 ----------------------------------------------------
 Top 5 most sold tracks:
@@ -49,6 +94,33 @@ WHERE CustomerId IN (
     HAVING SUM(Total) > (SELECT AVG(Total) FROM invoices)
 );
 ----------------------------------------------------
+-- 18. Top 5 customers by spending
+SELECT c.FirstName, SUM(i.Total) AS total
+FROM customers c
+JOIN invoices i ON c.CustomerId = i.CustomerId
+GROUP BY c.CustomerId
+ORDER BY total DESC
+LIMIT 5;
+
+-- 21. Rank customers by spending
+SELECT CustomerId,
+       SUM(Total) AS total_spent,
+       RANK() OVER (ORDER BY SUM(Total) DESC) AS rank
+FROM invoices
+GROUP BY CustomerId;
+
+
+-- 23. Monthly revenue trend
+SELECT strftime('%Y-%m', InvoiceDate) AS month,
+       SUM(Total) AS revenue
+FROM invoices
+GROUP BY month
+ORDER BY month;
+-- 24. Customer retention (repeat customers)
+SELECT CustomerId
+FROM invoices
+GROUP BY CustomerId
+HAVING COUNT(*) > 1;
 
 Most popular genre:
 SELECT g.Name, COUNT(*) AS PurchaseCount
@@ -117,6 +189,15 @@ FROM film f
 JOIN film_category fc ON f.film_id = fc.film_id
 JOIN category c ON fc.category_id = c.category_id
 WHERE c.name = 'Action';
+
+
+-- 4. List all films
+SELECT title FROM film;
+
+-- 5. Films longer than 120 minutes
+SELECT title, length
+FROM film
+WHERE length > 120;
 ----------------------------------------------------
 🟡 Intermediate Queries
 Find total number of rentals per customer:
@@ -133,6 +214,19 @@ JOIN film f ON i.film_id = f.film_id
 GROUP BY f.film_id
 ORDER BY rental_count DESC
 LIMIT 5;
+
+
+-- 8. Film with category
+SELECT f.title, c.name
+FROM film f
+JOIN film_category fc ON f.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id;
+
+-- 9. Customer rentals
+SELECT c.first_name, r.rental_id
+FROM customer c
+JOIN rental r ON c.customer_id = r.customer_id;
+
 ----------------------------------------------------
 🔴 Advanced Queries
 Customers who never rented a movie:
@@ -178,3 +272,67 @@ AND c.customer_id NOT IN (
     FROM rental
     WHERE rental_date < DATE('now', '-30 days')
 );
+
+-- 12. Rentals per customer
+SELECT customer_id, COUNT(*) AS rentals
+FROM rental
+GROUP BY customer_id;
+
+-- 13. Revenue per store
+SELECT store_id, SUM(amount)
+FROM payment
+GROUP BY store_id;
+
+
+-- 16. Actors in more than 10 films
+SELECT actor_id, COUNT(*) AS film_count
+FROM film_actor
+GROUP BY actor_id
+HAVING film_count > 10;
+
+-- 17. Customers who rented more than average
+SELECT customer_id
+FROM rental
+GROUP BY customer_id
+HAVING COUNT(*) > (
+    SELECT AVG(cnt)
+    FROM (
+        SELECT COUNT(*) AS cnt
+        FROM rental
+        GROUP BY customer_id
+    )
+);
+
+-- 20. Top rented films
+SELECT f.title, COUNT(*) AS rentals
+FROM rental r
+JOIN inventory i ON r.inventory_id = i.inventory_id
+JOIN film f ON i.film_id = f.film_id
+GROUP BY f.film_id
+ORDER BY rentals DESC
+LIMIT 5;
+
+-- 22. Running total revenue
+SELECT payment_id,
+       amount,
+       SUM(amount) OVER (ORDER BY payment_date) AS running_total
+FROM payment;
+
+-- 25. Customers inactive for 30 days
+SELECT customer_id
+FROM customer
+WHERE customer_id NOT IN (
+    SELECT customer_id
+    FROM rental
+    WHERE rental_date >= DATE('now', '-30 days')
+);
+-- 26. Most profitable category
+SELECT c.name, SUM(p.amount) AS revenue
+FROM payment p
+JOIN rental r ON p.rental_id = r.rental_id
+JOIN inventory i ON r.inventory_id = i.inventory_id
+JOIN film_category fc ON i.film_id = fc.film_id
+JOIN category c ON fc.category_id = c.category_id
+GROUP BY c.category_id
+ORDER BY revenue DESC
+LIMIT 1;
