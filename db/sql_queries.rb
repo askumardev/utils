@@ -380,3 +380,19 @@ JOIN category c ON fc.category_id = c.category_id
 GROUP BY c.category_id
 ORDER BY revenue DESC
 LIMIT 1;
+
+
+USE sakila;
+SHOW TABLES;
+DESCRIBE film;
+SELECT * from film;
+-- select columns
+SELECT title, rating, length from film;
+-- distinct
+SELECT DISTINCT rating from film ORDER BY rating;
+--
+SELECT title, rating, length from film
+WHERE rating = "R" OR length < 75;
+
+SELECT title, rating, length from film
+WHERE rating = "R" AND length < 75;
