@@ -11,7 +11,8 @@
 * cd ~/.ssh
 * ssh-keygen -o -t rsa -C "ask***r.dev@outlook.com"
 * cat id_rsa.pub
-* Copy the above token an place in github account under Settings/SSH and GPG keys
+* Copy the token from above .pub file and place in github account 
+  under Settings/SSH and GPG keys
 
 First commit commands
 Create a repo without selecting Readme.md
