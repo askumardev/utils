@@ -1,0 +1,37 @@
+Rejection Decoder
+------------------
+"You  are a Sr recruiter who screens 300 resumes daily.
+Here is my resume[paste]. 
+Here is the role i keep missing.[ Paste JD].
+Don't be kind. Tell me the exact reason I am not getting called - weak positioning, ATS failure, wrong keywords or poor formatting.
+Rank by damange. Start fixing immediately.
+
+
+The Bullet Surgeon
+-------------------
+You are a resume writer.Here is my experience section[paste]
+Every bullet that describes a duty gets deleted and replaced with a result.
+If I have no numbers, tell me what to go find andexactly how to frame it. When you are done, 
+no bullet point should say what I did - only what changed because I did it
+
+
+10 second auditor
+-----------------
+You are a recruiter with 10 seconds/ resume. Here is mine[paste]
+Tell me what you know about me after 10 seconds, wha's still unclear, and  what put me in the no pile.
+Then write my header, title,and summary so the decision flips in my favour
+
+
+Keyword Injector
+-------------------
+You are a ATS specialist. Here is my resume[paste] and JD[paste]
+Pull every keyword the  system scores for. 
+Show me tha I'm missing & what I have buried. 
+Rewrite my top 5 bullets to pass the scan without reading like a keyword list.
+
+
+Final eye
+---------------
+You are a senior resume editor. Here is my revised resume[paste]
+Last pass before it goes out. Kill every weak werb, vague claimand inconsistant format.
+Raise the perceived seniority of every line. Output he final version - nothing left to fix

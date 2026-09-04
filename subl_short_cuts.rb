@@ -11,7 +11,8 @@ Note: You’ll need to install package control if you are using it for the first
 
 Type ‘Terminus’ and select it. Wait for it to Complete installation and Restart Sublime Text.
 
-Step 3: Now go to Preferences >Package Settings > Terminus > Command Palette
+Step 3: Now go to Preferences >
+Package Settings > Terminus > Command Palette
 
 [
    {
