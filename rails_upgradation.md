@@ -22,6 +22,6 @@ bin/rails test:all
 
 * Make changes in config/application.rb as necessary
 ```
-```
 bin/rubocop
 ```
+
