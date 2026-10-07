@@ -1,0 +1,7 @@
+1NF
+
+2nf
+
+3nf
+
+bcnf
