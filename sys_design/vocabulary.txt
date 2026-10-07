@@ -1,0 +1,19 @@
+scalability
+
+availability
+
+cap theorem
+
+latency vs throughput
+
+consistancy models
+
+fault tolerance
+
+horizontal vs vertical scaling
+
+single point of failure
+
+redundancy
+
+bottlenecks
