@@ -1,0 +1,74 @@
+Beginners
+------------
+hello world gui
+number guessing game
+calculator
+todi list
+weather app
+web scraper
+basic flask app
+hangman game
+dice roller
+currency convertor
+text based game
+random pwd generator
+basic chatbot
+image downloader
+basic data visualization
+flash card quiz app
+url shortner
+rock paper scissors
+alarn clock
+guess the word game
+
+
+---------------------
+Intermediate
+---------------------
+personal portifolio site
+stock price tracker
+quiz game with ui
+chat app
+expense tracker
+simple blog system
+pwd manager
+tic tac toe game with ai
+web scraping
+book recommendation
+restapi using flask
+text based rpg
+interactive map
+file organizer
+recepie book app
+url scraper
+snake game
+db driven webapp
+bmi calculator
+ML model deployment
+
+
+--------------------------------
+advanced
+--------------------------------
+
+social media dashboard
+ecommerce website
+real itme chat app
+stock market prediction
+block chain implementation
+voice recognition system
+automated testing framework
+smart home system
+music recommendation
+neural network 
+crypto currency price
+augmented reality app
+health monitoring
+gesture recognition
+automated trading bot
+realtime object detection
+speech to text
+nlp proj
+facial recognition
+self driver car simulation
+
