@@ -1,0 +1,22 @@
+neo kim
+
+scalability  -> availability -> readability -> latency -> throughput
+
+db -> sql vs nosql -> load balancing ->  cacheing -> cache invalidation
+
+api design -> rest -> graphql -> grpc -> authentication
+
+fault tolerance -> high availability -> cap theorem -> consistancy models -> replication
+
+erasure coding -> consensus -> leader election -> secrets mgmt -> rbac
+
+sharding -> indexing -> denormalization -> acid -> base
+
+event driven -> msg q -> pub/sub -> sync vs async -> idempotency
+
+bulkhead -> retry logic -> timeout -> service discovery -> api gateway
+
+blue green deployment  -> canary release -> feature flags -> observability  -> logging
+
+correlaion id -> monitoring -> alerting -> full text search  -> time series
+
