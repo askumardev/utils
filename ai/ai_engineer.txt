@@ -1,0 +1,26 @@
+python
+
+git + github
+
+sql
+
+statistics & liner algebra
+
+ml
+
+deep learning (pytorch + tensorflow)
+
+llm foundations
+
+prompt engg
+
+rag
+
+ai agents + mcp
+
+ai deployment (docker+cloud)
+
+build ai apps
+
+
+
