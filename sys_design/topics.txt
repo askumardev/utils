@@ -1,0 +1,10 @@
+cap theorem
+availability patterns
+cdn
+load balancer
+reverse proxy
+cacheing
+tcp/udp/rpc/rest
+db(sql/nosql)
+consistancy patterns
+scalability & performance
