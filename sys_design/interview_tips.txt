@@ -1,0 +1,13 @@
+clarify requirements
+
+capacity estimation
+
+high level design
+
+dive into key components
+
+api design
+
+db design
+
+address key issues(scalability,reliability...)
