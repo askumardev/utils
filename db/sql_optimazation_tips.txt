@@ -1,0 +1,29 @@
+1. Proper indexing
+
+2. Avoid Select
+
+3. Adoid redundant / unnecessary data Retrieval
+
+4. Use joins efficiently
+
+5. Analyze query execution plans
+
+6. optimize where clauses
+
+7. optimize sub queries
+
+8 . use exists instead of In for subqueries
+
+9. Limit the use of distinct
+
+10. Leverage db specific features
+
+11. Monitor and update db Statistics
+
+12. use stored procedures
+
+13. Avoid unnecessary order by and group By
+
+14. use union all instead of union when possible
+
+15. breakdown complex queries
