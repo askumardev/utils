@@ -1,0 +1,18 @@
+Windows + R -> Run
+
+- temp
+
+- %temp%
+
+- prefetch
+
+C:\Windows\SoftwareDistribution\Download
+
+Disk cleanup -> select all --> OK
+
+This PC -> size:gigantic,
+	size:huge
+
+Settings -> Storage ->enable storage sence on oand remove temporary files(uncheck Downloads)
+
+         -> Apps -> select by size and remove unnecessary apps
