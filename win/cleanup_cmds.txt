@@ -11,7 +11,7 @@ C:\Windows\SoftwareDistribution\Download
 Disk cleanup -> select all --> OK
 
 This PC -> size:gigantic,
-	size:huge
+	       size:huge
 
 Settings -> Storage ->enable storage sence on oand remove temporary files(uncheck Downloads)
 
