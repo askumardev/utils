@@ -1,0 +1,5 @@
+imp claude stuff here...
+
+windows installation:
+
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
