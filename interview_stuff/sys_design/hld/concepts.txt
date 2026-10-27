@@ -1,0 +1,33 @@
+Scalability
+Availability & Reliability
+CAP therrem
+Consistency models
+loadbalancing
+cacheing
+DB sharding & replication
+SQL vs NoSQL
+Message queue/kafka
+CommandRatelimiting
+Consistant hashing
+API designService Discovery
+Leader election
+Distribute locks
+websockets/Splitwise
+Object storage
+Monitoring & logging
+Fault tolerance /Retry
+
+Design:
+---------
+youtube
+whatsapp
+twitter/X
+Uber
+Food delivery system
+URL shortner
+Netflix
+Google designServicegoogle maps
+Notification system
+Rate LimiterSearch autocomplete
+ticket booking system
+Distributed logging system

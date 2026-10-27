@@ -1,0 +1,40 @@
+class & object
+Encasulation
+Abstraction
+Inheritance
+polymorphism
+Interface & Abstract class
+Association/Aggregation / Composition
+Overloading & overriding
+SOLID
+
+
+DP:
+Strategy
+FactoryAbstract Factory
+AbstractBuilder
+Singleton
+Adapter
+Decorator
+Observer
+Strategy
+Command
+Proxy
+Chain of responsibility
+Composite
+Facade
+
+
+Questions to solve:
+----------------------
+Parking lot
+Vending machine
+Elevator system
+Movie ticket booking system
+Splitwise
+Rate Limiter
+LRU Cache
+Notification system
+Paymentgateway
+Taskscheduler
+

@@ -1,0 +1,15 @@
+what happens if cache goes down
+how do you prevent cache stampade
+what happens if kafka.msg q is unavailable
+how do you handle duplicate messages
+how do u guarantee idempotency
+what if primary db goes down
+how to handle replication lag
+how do u avoid hot partitions/shards
+what if one key/user becomes extremely hot
+how to handle retrieswithout causing duplicate writes
+how do u maintain oredering in Distributed systems
+how do u handle partial failures across services
+how do u migrate data while system is live
+how do u handle millions of websocket connections
+what changes when traffic suddenly becomes 10x
