@@ -1,0 +1,13 @@
+build image-> start -> run -> data
+
+docker logs <container-name>
+
+docker-compose logs
+
+docker inspect <cname>
+
+docker stats
+
+docker exec -it <cname> sh
+
+docker debug <cname>
