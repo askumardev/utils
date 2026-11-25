@@ -19,6 +19,8 @@ SELECT name, unit_price,
  FROM sql_store.products;
 
 
+
+
  select * from customers
 where points > 3000;
 
@@ -53,3 +55,55 @@ points > 1000);
 SELECT * FROM sql_store.order_items
 where order_id = 6
 AND (unit_price * quantity) > 30;
+
+ SELECT *  FROM sql_store.products
+ where quantity_in_stock IN(49, 38, 72);
+
+SELECT * FROM customers
+WHERE points BETWEEN  1000 AND 3000;
+
+SELECT * FROM customers
+WHERE birth_date BETWEEN  '1990-01-01' AND '2000-01-01';
+
+SELECT * FROM customers
+WHERE last_name LIKE 'b%';
+
+SELECT * FROM customers
+WHERE last_name LIKE '%b%';
+
+SELECT * FROM customers
+WHERE last_name LIKE '%y';
+
+SELECT * FROM customers
+WHERE last_name LIKE '_____y';
+
+
+SELECT * FROM customers
+WHERE phone IS NULL;
+
+SELECT * FROM customers
+WHERE phone IS NOT NULL;
+
+SELECT * FROM orders
+where shipped_date IS NULL
+
+select * from customers
+order by state, first_name DESC;
+
+
+SELECT * FROM sql_store.order_items
+where order_id = 2
+order by quantity * unit_price DESC;
+
+SELECT *, quantity * unit_price AS total FROM sql_store.order_items
+where order_id = 2
+order by total DESC;
+
+SELECT * FROM sql_store.customers
+ORDER BY points DESC
+LIMIT 3;
+
+SELECT order_id, o.customer_id, first_name
+FROM orders o
+JOIN customers c ON
+o.customer_id = c.customer_id;
