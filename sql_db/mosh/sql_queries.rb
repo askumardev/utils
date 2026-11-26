@@ -107,3 +107,11 @@ SELECT order_id, o.customer_id, first_name
 FROM orders o
 JOIN customers c ON
 o.customer_id = c.customer_id;
+
+SELECT order_id, o.product_id, quantity, o.unit_price
+FROM order_itemss o
+JOIN products p ON
+o.product_id = p.product_id;
+
+
+
