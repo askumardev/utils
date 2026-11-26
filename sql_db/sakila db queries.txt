@@ -76,12 +76,42 @@ Beginner–Intermediate
 Practice COUNT, SUM, AVG, MIN, MAX, GROUP BY and HAVING.
 #	Question
 16	Count the total number of films.
+SELECT count(*) FROM sakila.film
+
+
 17	Find the average rental rate of all films.
+SELECT AVG(rental_rate)
+FROM sakila.film;
+
+
 18	Find the maximum replacement cost.
+SELECT MAX(replacement_cost)
+FROM sakila.film;
+
+
 19	Find the minimum rental rate.
+SELECT MIN(rental_rate)
+FROM sakila.film;
+
+
 20	Count the number of customers.
+SELECT count(*) FROM sakila.customer;
+
+
 21	Find the number of films in each rating category.
+SELECT rating, COUNT(*) AS total_films
+FROM sakila.film
+group by rating;
+
+
 22	Find the average rental rate for each film rating.
+SELECT
+    rating,
+    AVG(rental_rate) AS average_rental_rate
+FROM sakila.film
+GROUP BY rating;
+
+
 23	Find the total number of films in each release year.
 24	Find the number of customers in each store.
 25	Find the total revenue generated from payments.
